@@ -19,6 +19,7 @@ public class MainMenu extends Container {
         frame.setContentPane(new MainMenu().MainPanel);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.pack();
+        frame.setSize(500, 600);
         frame.setVisible(true);
     }
 
@@ -32,25 +33,25 @@ public class MainMenu extends Container {
         saleHistoryButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
+                SaleHistory.openSalesHistory();
             }
         });
         customerManagementButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
+                CustomerManagement.openCustomerMangementPanel();
             }
         });
         stockManagementButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
+                StockManagement.openStockManagementPanel();
             }
         });
         employeeManagementButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
+                EmployeeManagement.openEmployeeManagementPanel();
             }
         });
     }
