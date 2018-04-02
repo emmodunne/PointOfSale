@@ -4,7 +4,7 @@ import java.awt.event.ActionListener;
 
 public class EmployeeManagement {
     private JPanel EmployeeManagementPanel;
-    private JButton AddEmployee;
+    private JButton AddEmployeeButton;
 
     public static void openEmployeeManagementPanel() {
         JFrame frame = new JFrame("Employee Management");
@@ -12,14 +12,15 @@ public class EmployeeManagement {
         frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         frame.pack();
         frame.setSize(1000, 500);
+        frame.setLocationRelativeTo(null);
         frame.setVisible(true);
     }
 
     public EmployeeManagement() {
-        AddEmployee.addActionListener(new ActionListener() {
+        AddEmployeeButton.addActionListener(new ActionListener(){
             @Override
             public void actionPerformed(ActionEvent e) {
-
+                AddEmployee.openAddEmployeepanel();
             }
         });
     }
