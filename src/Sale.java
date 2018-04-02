@@ -2,6 +2,13 @@ import javax.swing.*;
 
 public class Sale {
     private JPanel SalePanel;
+    private JTextField BarcodeTextField;
+    private JButton EnterButton;
+    private JTable SalesLinesTable;
+    private JTextField TotalTextField;
+    private JButton TenderPaymentButton;
+    private JLabel InputBarcodeLabel;
+    private JLabel TotalLabel;
 
     public static void openSales(){
         JFrame frame = new JFrame("Sale");

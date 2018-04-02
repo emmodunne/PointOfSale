@@ -15,11 +15,12 @@ public class MainMenu extends Container {
     private JButton employeeManagementButton;
 
     public static void main(String[] args) {
-        JFrame frame = new JFrame("MainMenu");
+        JFrame frame = new JFrame("Main Menu");
         frame.setContentPane(new MainMenu().MainPanel);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.pack();
         frame.setSize(500, 600);
+        frame.setLocationRelativeTo(null);
         frame.setVisible(true);
     }
 
