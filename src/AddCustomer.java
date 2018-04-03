@@ -16,8 +16,18 @@ public class AddCustomer {
         AddButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-            int result = AddCustomerDataHandler.addCustomer(FirstNameField.getText().toString(), LastNameField.getText().toString(), PhoneNumberField.getText().toString());
-
+                if(FirstNameField.getText().toString().isEmpty()){
+                    JOptionPane.showMessageDialog(null, "First name cannot be null value", "Error", JOptionPane.ERROR_MESSAGE);
+                }
+                else if(LastNameField.getText().toString().isEmpty()){
+                    JOptionPane.showMessageDialog(null, "Last name cannot be null value", "Error", JOptionPane.ERROR_MESSAGE);
+                }
+                else if(PhoneNumberField.getText().toString().isEmpty()){
+                    JOptionPane.showMessageDialog(null, "Phone number cannot be null value", "Error", JOptionPane.ERROR_MESSAGE);
+                }
+                else{
+                    AddCustomerDataHandler.addCustomer(FirstNameField.getText().toString(), LastNameField.getText().toString(), PhoneNumberField.getText().toString());
+                }
             }
         });
     }
