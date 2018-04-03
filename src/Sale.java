@@ -1,4 +1,6 @@
 import javax.swing.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public class Sale {
     private JPanel SalePanel;
@@ -9,6 +11,28 @@ public class Sale {
     private JButton TenderPaymentButton;
     private JLabel InputBarcodeLabel;
     private JLabel TotalLabel;
+    private javax.swing.table.DefaultTableModel SalesLinesTableModel =
+            new javax.swing.table.DefaultTableModel(0,4);
+
+    public Sale() {
+        SalesLinesTable.setModel(SalesLinesTableModel);
+        String[] SalesLinesColumnNames = {"QTY", "Barcode", "Description", "Price"};
+        SalesLinesTableModel.setColumnIdentifiers(SalesLinesColumnNames);
+        TenderPaymentButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                Payment.openPaymentScreen();
+            }
+        });
+        EnterButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+               SalesLinesTableModel.insertRow(SalesLinesTableModel.getRowCount(), SalesDataHandler.getStockLine(BarcodeTextField.getText().toString()));
+            }
+        });
+    }
+
+
 
     public static void openSales(){
         JFrame frame = new JFrame("Sale");
@@ -16,6 +40,7 @@ public class Sale {
         frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         frame.pack();
         frame.setSize(1000, 500);
+        frame.setLocationRelativeTo(null);
         frame.setVisible(true);
     }
 }

@@ -78,6 +78,7 @@
         </constraints>
         <properties>
           <editable value="false"/>
+          <enabled value="true"/>
           <text value="€0.00"/>
         </properties>
       </component>
