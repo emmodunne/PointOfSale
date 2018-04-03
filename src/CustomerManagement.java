@@ -2,11 +2,16 @@ import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+
 public class CustomerManagement {
     private JPanel CustomerManagementPanel;
     private JButton buttoAddCustomerBUttonn1;
+    private JTable CustomerTable;
+    private javax.swing.table.DefaultTableModel CustomerTableModel = new javax.swing.table.DefaultTableModel();
 
     public CustomerManagement() {
+        CustomerTable.setModel(CustomerTableModel);
+        CustomerTableModel.setDataVector(CustomerManagementDataHandler.getRows("Customers"),CustomerManagementDataHandler.getTitles("Customers"));
         buttoAddCustomerBUttonn1.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
