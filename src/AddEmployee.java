@@ -2,6 +2,11 @@ import javax.swing.*;
 
 public class AddEmployee {
     private JPanel AddEmployeePanel;
+    private JTextField textField1;
+    private JTextField textField2;
+    private JComboBox comboBox1;
+    private JTextField textField3;
+    private JButton button1;
 
     public static void openAddEmployeepanel() {
         JFrame frame = new JFrame("Add Employee");
