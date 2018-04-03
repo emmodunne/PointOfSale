@@ -9,7 +9,7 @@
     <properties/>
     <border type="bevel-lowered"/>
     <children>
-      <component id="cac78" class="javax.swing.JButton" binding="AddEmployee">
+      <component id="cac78" class="javax.swing.JButton" binding="AddEmployeeButton">
         <constraints>
           <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
           <forms top="0" left="400" bottom="200" right="400"/>

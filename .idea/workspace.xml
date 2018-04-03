@@ -1,20 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cef084e0-35e1-45dc-a595-77dbff0d574d" name="Default" comment="Started Data Handler for Sales Screen">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/DbCredentials.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/SalesDataHandler.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/mysql_connector_java_5_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SaleHistory.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SaleHistory.jfd" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/PointOfSale/Tester.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Tester.java" afterPath="" />
+    <list default="true" id="cef084e0-35e1-45dc-a595-77dbff0d574d" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/PointOfSale/Tester.class" afterPath="$PROJECT_DIR$/out/production/PointOfSale/Tester.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PointOfSale.iml" afterPath="$PROJECT_DIR$/PointOfSale.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Payment.form" afterPath="$PROJECT_DIR$/src/Payment.form" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Payment.java" afterPath="$PROJECT_DIR$/src/Payment.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/MainMenu.java" afterPath="$PROJECT_DIR$/src/MainMenu.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Sale.form" afterPath="$PROJECT_DIR$/src/Sale.form" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Sale.java" afterPath="$PROJECT_DIR$/src/Sale.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Tester.java" afterPath="$PROJECT_DIR$/src/Tester.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -29,117 +23,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Sale.form" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Sale.form" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Sale.form">
           <provider selected="true" editor-type-id="ui-designer">
             <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Sale.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Sale.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-8">
-              <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SalesDataHandler.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/SalesDataHandler.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="36" column="32" lean-forward="false" selection-start-line="36" selection-start-column="32" selection-end-line="36" selection-end-column="32" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PointOfSale.iml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/PointOfSale.iml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="workspace.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1647">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding>
-                <marker date="1522719984000" expanded="true" signature="68804:68846" ph="..." />
-                <marker date="1522719984000" expanded="true" signature="68804:68864" ph="..." />
-                <marker date="1522719984000" expanded="true" signature="68804:68877" ph="..." />
-                <marker date="1522719984000" expanded="true" signature="68804:68892" ph="..." />
-                <marker date="1522719984000" expanded="true" signature="68927:72098" ph="..." />
-                <marker date="1522719984000" expanded="true" signature="68940:72083" ph="..." />
-                <marker date="1522719984000" expanded="true" signature="68994:69289" ph="..." />
-                <marker date="1522719984000" expanded="true" signature="69013:69274" ph="..." />
-                <marker date="1522719984000" expanded="true" signature="69076:69254" ph="..." />
-                <marker date="1522719984000" expanded="true" signature="69116:69220" ph="..." />
-                <marker date="1522719984000" expanded="true" signature="69137:69198" ph="..." />
-                <marker date="1522719984000" expanded="true" signature="69322:69587" ph="..." />
-                <marker date="1522719984000" expanded="true" signature="69341:69572" ph="..." />
-                <marker date="1522719984000" expanded="true" signature="69374:69552" ph="..." />
-                <marker date="1522719984000" expanded="true" signature="69414:69518" ph="..." />
-                <marker date="1522719984000" expanded="true" signature="69435:69496" ph="..." />
-                <marker date="1522719984000" expanded="true" signature="69637:69964" ph="..." />
-                <marker date="1522719984000" expanded="true" signature="69656:69949" ph="..." />
-                <marker date="1522719984000" expanded="true" signature="69751:69929" ph="..." />
-                <marker date="1522719984000" expanded="true" signature="69791:69895" ph="..." />
-                <marker date="1522719984000" expanded="true" signature="69812:69873" ph="..." />
-                <marker date="1522719984000" expanded="true" signature="70015:70280" ph="..." />
-                <marker date="1522719984000" expanded="true" signature="70034:70265" ph="..." />
-                <marker date="1522719984000" expanded="true" signature="70067:70245" ph="..." />
-                <marker date="1522719984000" expanded="true" signature="70107:70211" ph="..." />
-                <marker date="1522719984000" expanded="true" signature="70128:70189" ph="..." />
-                <marker date="1522719984000" expanded="true" signature="70323:70629" ph="..." />
-                <marker date="1522719984000" expanded="true" signature="70342:70614" ph="..." />
-                <marker date="1522719984000" expanded="true" signature="70416:70594" ph="..." />
-                <marker date="1522719984000" expanded="true" signature="70456:70560" ph="..." />
-                <marker date="1522719984000" expanded="true" signature="70477:70538" ph="..." />
-                <marker date="1522719984000" expanded="true" signature="70680:71033" ph="..." />
-                <marker date="1522719984000" expanded="true" signature="70699:71018" ph="..." />
-                <marker date="1522719984000" expanded="true" signature="70781:70998" ph="..." />
-                <marker date="1522719984000" expanded="true" signature="70821:70964" ph="..." />
-                <marker date="1522719984000" expanded="true" signature="70842:70942" ph="..." />
-                <marker date="1522719984000" expanded="true" signature="71068:71374" ph="..." />
-                <marker date="1522719984000" expanded="true" signature="71087:71359" ph="..." />
-                <marker date="1522719984000" expanded="true" signature="71161:71339" ph="..." />
-                <marker date="1522719984000" expanded="true" signature="71201:71305" ph="..." />
-                <marker date="1522719984000" expanded="true" signature="71222:71283" ph="..." />
-                <marker date="1522719984000" expanded="true" signature="71426:71756" ph="..." />
-                <marker date="1522719984000" expanded="true" signature="71445:71741" ph="..." />
-                <marker date="1522719984000" expanded="true" signature="71543:71721" ph="..." />
-                <marker date="1522719984000" expanded="true" signature="71583:71687" ph="..." />
-                <marker date="1522719984000" expanded="true" signature="71604:71665" ph="..." />
-                <marker date="1522719984000" expanded="true" signature="71804:72069" ph="..." />
-                <marker date="1522719984000" expanded="true" signature="71823:72054" ph="..." />
-                <marker date="1522719984000" expanded="true" signature="71856:72034" ph="..." />
-                <marker date="1522719984000" expanded="true" signature="71896:72000" ph="..." />
-                <marker date="1522719984000" expanded="true" signature="71917:71978" ph="..." />
-                <marker date="1522719984000" expanded="true" signature="72149:74653" ph="..." />
-                <marker date="1522719984000" expanded="true" signature="72163:72311" ph="..." />
-                <marker date="1522719984000" expanded="true" signature="72330:73872" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="uiDesigner.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.idea/uiDesigner.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
           </provider>
         </entry>
       </file>
@@ -163,6 +50,7 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
+        <option value="$PROJECT_DIR$/src/Sale.java" />
         <option value="$PROJECT_DIR$/SaleHistory.jfd" />
         <option value="$PROJECT_DIR$/SaleHistory.java" />
         <option value="$PROJECT_DIR$/src/SaleHistory.form" />
@@ -177,12 +65,7 @@
         <option value="$PROJECT_DIR$/src/Tester.java" />
         <option value="$PROJECT_DIR$/src/SaleHistory.java" />
         <option value="$PROJECT_DIR$/src/MainMenu.java" />
-        <option value="$PROJECT_DIR$/src/Payment.java" />
         <option value="$PROJECT_DIR$/src/Sale.form" />
-        <option value="$PROJECT_DIR$/src/Payment.form" />
-        <option value="$PROJECT_DIR$/src/DbCredentials.java" />
-        <option value="$PROJECT_DIR$/src/SalesDataHandler.java" />
-        <option value="$PROJECT_DIR$/src/Sale.java" />
       </list>
     </option>
   </component>
@@ -243,11 +126,6 @@
             <path>
               <item name="PointOfSale" type="b2602c69:ProjectViewProjectNode" />
               <item name="PointOfSale" type="462c0819:PsiDirectoryNode" />
-              <item name=".idea" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="PointOfSale" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PointOfSale" type="462c0819:PsiDirectoryNode" />
               <item name="lib" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -257,7 +135,21 @@
             </path>
             <path>
               <item name="PointOfSale" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="PointOfSale" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="AddCustomer" type="e9f4de52:FormNode" />
+            </path>
+            <path>
+              <item name="PointOfSale" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PointOfSale" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="AddEmployee" type="e9f4de52:FormNode" />
+            </path>
+            <path>
+              <item name="PointOfSale" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PointOfSale" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Sale" type="e9f4de52:FormNode" />
             </path>
           </expand>
           <select />
@@ -791,14 +683,7 @@
       <option name="project" value="LOCAL" />
       <updated>1522511629874</updated>
     </task>
-    <task id="LOCAL-00011" summary="Sales Form GUI Design">
-      <created>1522708571530</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1522708571530</updated>
-    </task>
-    <option name="localTasksCounter" value="12" />
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -820,13 +705,13 @@
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="simpleUML" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3276923" sideWeight="0.496875" order="15" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3276923" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3276923" sideWeight="0.503125" order="14" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31914893" sideWeight="0.5060514" order="14" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24307692" sideWeight="0.83984375" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15846154" sideWeight="0.49394855" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32668713" sideWeight="0.496875" order="16" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="17" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
@@ -921,13 +806,11 @@
     <MESSAGE value="Commit from Itellij" />
     <MESSAGE value="Changed to Gibbey Power" />
     <MESSAGE value="First Button on Main Menu working, will update the rest of buttons soon" />
-    <MESSAGE value="Sales Form GUI Design" />
-    <MESSAGE value="Started Data Handler for Sales Screen" />
-    <option name="LAST_COMMIT_MESSAGE" value="Started Data Handler for Sales Screen" />
+    <option name="LAST_COMMIT_MESSAGE" value="First Button on Main Menu working, will update the rest of buttons soon" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="9" />
+      <option name="time" value="5" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -936,6 +819,62 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/PointOfSale.iml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Sale.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="26" lean-forward="true" selection-start-line="4" selection-start-column="26" selection-end-line="4" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Tester.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PointOfSale.iml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Tester.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PointOfSale.iml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Tester.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Tester.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1109,6 +1048,30 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/SaleHistory.jfd">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PointOfSale.iml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SaleHistory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="531">
+          <caret line="100" column="9" lean-forward="false" selection-start-line="100" selection-start-column="9" selection-end-line="100" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/EmployeeManagement.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="254">
@@ -1140,6 +1103,40 @@
           <caret line="0" column="13" lean-forward="false" selection-start-line="0" selection-start-column="13" selection-end-line="0" selection-end-column="13" />
           <folding />
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Tester.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Payment.form">
+      <provider selected="true" editor-type-id="ui-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SaleHistory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="33" lean-forward="false" selection-start-line="10" selection-start-column="33" selection-end-line="10" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Sale.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="1" lean-forward="false" selection-start-line="13" selection-start-column="1" selection-end-line="13" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/MainMenu.form">
+      <provider selected="true" editor-type-id="ui-designer">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/MainMenu.java">
@@ -1178,180 +1175,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/MainMenu.form">
-      <provider selected="true" editor-type-id="ui-designer">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/SaleHistory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="33" lean-forward="false" selection-start-line="10" selection-start-column="33" selection-end-line="10" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SaleHistory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1259">
-          <caret line="100" column="9" lean-forward="false" selection-start-line="100" selection-start-column="9" selection-end-line="100" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SaleHistory.jfd">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Payment.form">
-      <provider selected="true" editor-type-id="ui-designer">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Payment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/DbCredentials.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_144.jdk/Contents/Home/src.zip!/java/net/URLClassLoader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="98">
-          <caret line="247" column="35" lean-forward="false" selection-start-line="247" selection-start-column="35" selection-end-line="247" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Tester.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="13" lean-forward="false" selection-start-line="0" selection-start-column="13" selection-end-line="0" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/lib/mysql-connector-java-5.1.46.jar!/com/mysql/jdbc/ResultSetImpl.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="2685" column="0" lean-forward="false" selection-start-line="2685" selection-start-column="0" selection-end-line="2685" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Sale.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-8">
-          <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PointOfSale.iml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1647">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1522719984000" expanded="true" signature="68804:68846" ph="..." />
-            <marker date="1522719984000" expanded="true" signature="68804:68864" ph="..." />
-            <marker date="1522719984000" expanded="true" signature="68804:68877" ph="..." />
-            <marker date="1522719984000" expanded="true" signature="68804:68892" ph="..." />
-            <marker date="1522719984000" expanded="true" signature="68927:72098" ph="..." />
-            <marker date="1522719984000" expanded="true" signature="68940:72083" ph="..." />
-            <marker date="1522719984000" expanded="true" signature="68994:69289" ph="..." />
-            <marker date="1522719984000" expanded="true" signature="69013:69274" ph="..." />
-            <marker date="1522719984000" expanded="true" signature="69076:69254" ph="..." />
-            <marker date="1522719984000" expanded="true" signature="69116:69220" ph="..." />
-            <marker date="1522719984000" expanded="true" signature="69137:69198" ph="..." />
-            <marker date="1522719984000" expanded="true" signature="69322:69587" ph="..." />
-            <marker date="1522719984000" expanded="true" signature="69341:69572" ph="..." />
-            <marker date="1522719984000" expanded="true" signature="69374:69552" ph="..." />
-            <marker date="1522719984000" expanded="true" signature="69414:69518" ph="..." />
-            <marker date="1522719984000" expanded="true" signature="69435:69496" ph="..." />
-            <marker date="1522719984000" expanded="true" signature="69637:69964" ph="..." />
-            <marker date="1522719984000" expanded="true" signature="69656:69949" ph="..." />
-            <marker date="1522719984000" expanded="true" signature="69751:69929" ph="..." />
-            <marker date="1522719984000" expanded="true" signature="69791:69895" ph="..." />
-            <marker date="1522719984000" expanded="true" signature="69812:69873" ph="..." />
-            <marker date="1522719984000" expanded="true" signature="70015:70280" ph="..." />
-            <marker date="1522719984000" expanded="true" signature="70034:70265" ph="..." />
-            <marker date="1522719984000" expanded="true" signature="70067:70245" ph="..." />
-            <marker date="1522719984000" expanded="true" signature="70107:70211" ph="..." />
-            <marker date="1522719984000" expanded="true" signature="70128:70189" ph="..." />
-            <marker date="1522719984000" expanded="true" signature="70323:70629" ph="..." />
-            <marker date="1522719984000" expanded="true" signature="70342:70614" ph="..." />
-            <marker date="1522719984000" expanded="true" signature="70416:70594" ph="..." />
-            <marker date="1522719984000" expanded="true" signature="70456:70560" ph="..." />
-            <marker date="1522719984000" expanded="true" signature="70477:70538" ph="..." />
-            <marker date="1522719984000" expanded="true" signature="70680:71033" ph="..." />
-            <marker date="1522719984000" expanded="true" signature="70699:71018" ph="..." />
-            <marker date="1522719984000" expanded="true" signature="70781:70998" ph="..." />
-            <marker date="1522719984000" expanded="true" signature="70821:70964" ph="..." />
-            <marker date="1522719984000" expanded="true" signature="70842:70942" ph="..." />
-            <marker date="1522719984000" expanded="true" signature="71068:71374" ph="..." />
-            <marker date="1522719984000" expanded="true" signature="71087:71359" ph="..." />
-            <marker date="1522719984000" expanded="true" signature="71161:71339" ph="..." />
-            <marker date="1522719984000" expanded="true" signature="71201:71305" ph="..." />
-            <marker date="1522719984000" expanded="true" signature="71222:71283" ph="..." />
-            <marker date="1522719984000" expanded="true" signature="71426:71756" ph="..." />
-            <marker date="1522719984000" expanded="true" signature="71445:71741" ph="..." />
-            <marker date="1522719984000" expanded="true" signature="71543:71721" ph="..." />
-            <marker date="1522719984000" expanded="true" signature="71583:71687" ph="..." />
-            <marker date="1522719984000" expanded="true" signature="71604:71665" ph="..." />
-            <marker date="1522719984000" expanded="true" signature="71804:72069" ph="..." />
-            <marker date="1522719984000" expanded="true" signature="71823:72054" ph="..." />
-            <marker date="1522719984000" expanded="true" signature="71856:72034" ph="..." />
-            <marker date="1522719984000" expanded="true" signature="71896:72000" ph="..." />
-            <marker date="1522719984000" expanded="true" signature="71917:71978" ph="..." />
-            <marker date="1522719984000" expanded="true" signature="72149:74653" ph="..." />
-            <marker date="1522719984000" expanded="true" signature="72163:72311" ph="..." />
-            <marker date="1522719984000" expanded="true" signature="72330:73872" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/uiDesigner.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Sale.form">
       <provider selected="true" editor-type-id="ui-designer">
         <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/SalesDataHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="36" column="32" lean-forward="false" selection-start-line="36" selection-start-column="32" selection-end-line="36" selection-end-column="32" />
-          <folding />
-        </state>
       </provider>
     </entry>
   </component>
@@ -1442,7 +1268,7 @@
       </state>
       <state key="ProjectLibrariesConfigurable.UI">
         <settings>
-          <last-edited>mysql-connector-java-5.1.46</last-edited>
+          <last-edited>mysql-connector-java-5.1</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
