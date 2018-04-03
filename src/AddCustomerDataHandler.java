@@ -7,14 +7,14 @@ public class AddCustomerDataHandler {
     private static java.sql.Connection connection;
     private static java.sql.Statement statement;
 
-    public static void addCustomer (String firstName, String lastName, String phoneNum) {
+    public static int addCustomer (String firstName, String lastName, String phoneNum) {
         String sqlQuery = "INSERT INTO Customers (FirstName, LastName, PhoneNumber) VALUES ('" + firstName +"', '" + lastName +"', '" + phoneNum +"')";
 
         try{
             Class.forName("com.mysql.jdbc.Driver");
             connection = DriverManager.getConnection(DbCredentials.dbUrl, DbCredentials.dbUsername, DbCredentials.dbPassword);
             statement = connection.createStatement();
-            int Result = statement.executeUpdate(sqlQuery);
+            return(statement.executeUpdate(sqlQuery));
         }
         catch ( ClassNotFoundException cnfex ) {
             System.err.println("Issue with driver." );
@@ -29,7 +29,7 @@ public class AddCustomerDataHandler {
             System.err.println( ex );
             ex.printStackTrace();
         }
-        return null;
+        return -1;
     }
 
 }

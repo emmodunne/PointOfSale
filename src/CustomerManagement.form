@@ -1,11 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="CustomerManagement">
   <grid id="27dc6" binding="CustomerManagementPanel" layout-manager="FormLayout">
+    <rowspec value="center:d:noGrow"/>
+    <colspec value="fill:d:grow"/>
     <constraints>
       <xy x="20" y="20" width="500" height="400"/>
     </constraints>
     <properties/>
     <border type="bevel-lowered"/>
-    <children/>
+    <children>
+      <component id="5441c" class="javax.swing.JButton" binding="buttoAddCustomerBUttonn1">
+        <constraints>
+          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+          <forms/>
+        </constraints>
+        <properties>
+          <text value="Add"/>
+        </properties>
+      </component>
+    </children>
   </grid>
 </form>
