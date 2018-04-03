@@ -20,9 +20,7 @@ public class SalesDataHandler {
                 }
                 return stockLine;
             }
-            else{
-                return null;
-            }
+            throw new BarcodeNotFoundException("Barcode " + barcode + " not Found");
         }
         catch ( ClassNotFoundException cnfex ) {
             System.err.println("Issue with driver." );
