@@ -26,6 +26,7 @@ public class AddCustomer {
                     JOptionPane.showMessageDialog(null, "Phone number cannot be null value", "Error", JOptionPane.ERROR_MESSAGE);
                 }
                 else{
+                    JOptionPane.showMessageDialog(null, "Successfully added customer", "Added" , JOptionPane.INFORMATION_MESSAGE);
                     AddCustomerDataHandler.addCustomer(FirstNameField.getText().toString(), LastNameField.getText().toString(), PhoneNumberField.getText().toString());
                 }
             }
@@ -37,7 +38,8 @@ public class AddCustomer {
         frame.setContentPane(new AddCustomer().AddCustomerPanel);
         frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         frame.pack();
-        frame.setSize(300, 150);
+        frame.setSize(1000, 500);
+        frame.setLocationRelativeTo(null);
         frame.setVisible(true);
     }
 }
