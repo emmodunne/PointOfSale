@@ -27,12 +27,14 @@ public class Sale {
         EnterButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-               SalesLinesTableModel.insertRow(SalesLinesTableModel.getRowCount(), SalesDataHandler.getStockLine(BarcodeTextField.getText().toString()));
+                Object[] stockLineReturned = null;
+                stockLineReturned = SalesDataHandler.getStockLine(BarcodeTextField.getText().toString());
+               if (stockLineReturned != null){
+                   SalesLinesTableModel.insertRow(SalesLinesTableModel.getRowCount(), stockLineReturned);
+               }
             }
         });
     }
-
-
 
     public static void openSales(){
         JFrame frame = new JFrame("Sale");
