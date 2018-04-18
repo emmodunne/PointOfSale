@@ -34,7 +34,7 @@ public class AddCustomer {
     }
 
     public static void openAddCustomerPanel() {
-        JFrame frame = new JFrame("Add CustomerEmployee");
+        JFrame frame = new JFrame("Add Customer");
         frame.setContentPane(new AddCustomer().AddCustomerPanel);
         frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         frame.pack();

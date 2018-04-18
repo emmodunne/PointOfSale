@@ -4,7 +4,10 @@ import java.awt.event.ActionListener;
 
 public class EmployeeManagement {
     private JPanel EmployeeManagementPanel;
-    private JButton AddEmployeeButton;
+    private JTable employeeTable;
+    private JButton addEmployeeButton;
+    private JButton removeEmployeeButton;
+    private javax.swing.table.DefaultTableModel EmployeeTableModel = new javax.swing.table.DefaultTableModel();
 
     public static void openEmployeeManagementPanel() {
         JFrame frame = new JFrame("Employee Management");
@@ -17,10 +20,18 @@ public class EmployeeManagement {
     }
 
     public EmployeeManagement() {
-        AddEmployeeButton.addActionListener(new ActionListener(){
+
+
+        addEmployeeButton.addActionListener(new ActionListener(){
             @Override
             public void actionPerformed(ActionEvent e) {
-                AddEmployee.openAddEmployeepanel();
+                AddEmployee.openAddEmployeepane();
+            }
+        });
+        removeEmployeeButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
             }
         });
     }
