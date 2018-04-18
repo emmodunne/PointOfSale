@@ -1,9 +1,9 @@
 import java.sql.DriverManager;
+
 public class SalesDataHandler {
     private static java.sql.Connection connection;
     private static java.sql.Statement statement;
     private static java.sql.ResultSet resultSet;
-    private static java.sql.ResultSetMetaData resultSetMetaData;
 
     public static Object[] getStockLine (String barcode) {
         String sqlQuery = "SELECT Barcode, Description, Price FROM Stock WHERE Barcode = '" + barcode + "'";
@@ -35,7 +35,17 @@ public class SalesDataHandler {
             System.err.println( ex );
             ex.printStackTrace();
         }
+        finally {
+            try {
+                statement.close();
+                resultSet.close();
+                connection.close();
+            }
+            catch (java.sql.SQLException sqlex){
+                System.err.println( sqlex );
+                sqlex.printStackTrace();
+            }
+        }
         return null;
     }
-
 }

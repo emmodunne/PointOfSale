@@ -1,3 +1,5 @@
+import sun.applet.Main;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -13,6 +15,7 @@ public class MainMenu extends Container {
     private JButton saleHistoryButton;
     private JButton saleButton;
     private JButton employeeManagementButton;
+    private static boolean saleOpen;
 
     public static void main(String[] args) {
         JFrame frame = new JFrame("Main Menu");
@@ -28,7 +31,10 @@ public class MainMenu extends Container {
         saleButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                Sale.openSales();
+                if (!saleOpen) {
+                    Sale.openSales();
+                    saleOpen = true;
+                }
             }
         });
         saleHistoryButton.addActionListener(new ActionListener() {
@@ -57,7 +63,7 @@ public class MainMenu extends Container {
         });
     }
 
-    private void createUIComponents() {
-        // TODO: place custom component creation code here
+    public static void setSaleOpen(boolean saleOpen) {
+        MainMenu.saleOpen = saleOpen;
     }
 }

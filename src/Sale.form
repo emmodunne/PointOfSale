@@ -8,18 +8,18 @@
     <rowspec value="center:max(d;4px):noGrow"/>
     <rowspec value="top:3dlu:noGrow"/>
     <rowspec value="center:max(d;4px):noGrow"/>
-    <colspec value="fill:d:noGrow"/>
+    <colspec value="fill:100px:noGrow"/>
     <colspec value="left:4dlu:noGrow"/>
     <colspec value="fill:d:grow"/>
     <colspec value="left:4dlu:noGrow"/>
-    <colspec value="fill:max(d;4px):noGrow"/>
+    <colspec value="fill:100px:noGrow"/>
     <constraints>
       <xy x="17" y="18" width="520" height="409"/>
     </constraints>
     <properties/>
     <border type="bevel-lowered"/>
     <children>
-      <component id="65c59" class="javax.swing.JLabel" binding="InputBarcodeLabel">
+      <component id="65c59" class="javax.swing.JLabel" binding="inputBarcodeLabel">
         <constraints>
           <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
           <forms/>
@@ -28,7 +28,7 @@
           <text value="Input Barcode:"/>
         </properties>
       </component>
-      <component id="89016" class="javax.swing.JTextField" binding="BarcodeTextField">
+      <component id="89016" class="javax.swing.JTextField" binding="barcodeText">
         <constraints>
           <grid row="0" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
             <preferred-size width="150" height="-1"/>
@@ -37,7 +37,7 @@
         </constraints>
         <properties/>
       </component>
-      <component id="d2825" class="javax.swing.JButton" binding="EnterButton">
+      <component id="d2825" class="javax.swing.JButton" binding="enterButton">
         <constraints>
           <grid row="0" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
           <forms/>
@@ -51,16 +51,20 @@
           <grid row="2" column="0" row-span="1" col-span="5" vsize-policy="7" hsize-policy="7" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
           <forms defaultalign-horz="false" defaultalign-vert="false"/>
         </constraints>
-        <properties/>
+        <properties>
+          <enabled value="true"/>
+        </properties>
         <border type="none"/>
         <children>
           <component id="d0543" class="javax.swing.JTable" binding="SalesLinesTable">
             <constraints/>
-            <properties/>
+            <properties>
+              <enabled value="true"/>
+            </properties>
           </component>
         </children>
       </scrollpane>
-      <component id="7f9d8" class="javax.swing.JLabel" binding="TotalLabel">
+      <component id="7f9d8" class="javax.swing.JLabel" binding="totalLabel">
         <constraints>
           <grid row="4" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
           <forms defaultalign-horz="false"/>
@@ -69,7 +73,7 @@
           <text value="Total:"/>
         </properties>
       </component>
-      <component id="4ff0e" class="javax.swing.JTextField" binding="TotalTextField">
+      <component id="4ff0e" class="javax.swing.JTextField" binding="salesTotalText">
         <constraints>
           <grid row="4" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
             <preferred-size width="150" height="-1"/>
@@ -82,7 +86,7 @@
           <text value="€0.00"/>
         </properties>
       </component>
-      <component id="334a3" class="javax.swing.JButton" binding="TenderPaymentButton">
+      <component id="334a3" class="javax.swing.JButton" binding="tenderPaymentButton">
         <constraints>
           <grid row="6" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
           <forms/>
