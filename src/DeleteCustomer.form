@@ -55,7 +55,7 @@
           <forms/>
         </constraints>
         <properties>
-          <text value="Button"/>
+          <text value="Delete Customer"/>
         </properties>
       </component>
       <hspacer id="d3771">

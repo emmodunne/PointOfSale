@@ -28,6 +28,7 @@ public class AddCustomer {
                 else{
                     JOptionPane.showMessageDialog(null, "Successfully added customer", "Added" , JOptionPane.INFORMATION_MESSAGE);
                     AddCustomerDataHandler.addCustomer(FirstNameField.getText().toString(), LastNameField.getText().toString(), PhoneNumberField.getText().toString());
+                    CustomerManagement.openCustomerMangementPanel();
                 }
             }
         });
@@ -38,7 +39,7 @@ public class AddCustomer {
         frame.setContentPane(new AddCustomer().AddCustomerPanel);
         frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         frame.pack();
-        frame.setSize(1000, 500);
+        frame.setSize(400, 400);
         frame.setLocationRelativeTo(null);
         frame.setVisible(true);
     }

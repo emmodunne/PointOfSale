@@ -32,8 +32,9 @@ public class CustomerManagement {
         frame.setContentPane(new CustomerManagement().CustomerManagementPanel);
         frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         frame.pack();
-        frame.setSize(1000, 500);
+        frame.setSize(500, 600);
         frame.setLocationRelativeTo(null);
         frame.setVisible(true);
     }
+
 }
