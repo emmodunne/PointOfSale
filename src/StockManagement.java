@@ -8,7 +8,7 @@ public class StockManagement {
         frame.setContentPane(new StockManagement().StockManagementPanel);
         frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         frame.pack();
-        frame.setSize(1000, 500);
+        frame.setSize(500, 600);
         frame.setLocationRelativeTo(null);
         frame.setVisible(true);
     }

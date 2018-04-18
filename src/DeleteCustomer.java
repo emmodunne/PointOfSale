@@ -17,32 +17,19 @@ public class DeleteCustomer {
     public DeleteCustomer() {
         CustomerTable.setModel(CustomerTableModel);
         CustomerTableModel.setDataVector(CustomerManagementDataHandler.getRows("Customers"),CustomerManagementDataHandler.getTitles("Customers"));
-//            AddButton.addActionListener(new ActionListener() {
-//                @Override
-//                public void actionPerformed(ActionEvent e) {
-//                    if(FirstNameField.getText().toString().isEmpty()){
-//                        JOptionPane.showMessageDialog(null, "First name cannot be null value", "Error", JOptionPane.ERROR_MESSAGE);
-//                    }
-//                    else if(LastNameField.getText().toString().isEmpty()){
-//                        JOptionPane.showMessageDialog(null, "Last name cannot be null value", "Error", JOptionPane.ERROR_MESSAGE);
-//                    }
-//                    else if(PhoneNumberField.getText().toString().isEmpty()){
-//                        JOptionPane.showMessageDialog(null, "Phone number cannot be null value", "Error", JOptionPane.ERROR_MESSAGE);
-//                    }
-//                    else{
-//                        JOptionPane.showMessageDialog(null, "Successfully added customer", "Added" , JOptionPane.INFORMATION_MESSAGE);
-//                        AddCustomerDataHandler.addCustomer(FirstNameField.getText().toString(), LastNameField.getText().toString(), PhoneNumberField.getText().toString());
-//                    }
-//                }
-//            });
+
+
         DeleteButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 if(deleteField.getText().toString().isEmpty()){
                         JOptionPane.showMessageDialog(null, "Delete field cannot be null value", "Error", JOptionPane.ERROR_MESSAGE);
-                    }
-                JOptionPane.showMessageDialog(null, "Successfully deleted customer", "Added" , JOptionPane.INFORMATION_MESSAGE);
-                DeleteCustomerDataHandler.deleteCustomer(deleteField.getText().toString());
+                }else {
+                    JOptionPane.showMessageDialog(null, "Successfully deleted customer", "Added", JOptionPane.INFORMATION_MESSAGE);
+                    DeleteCustomerDataHandler.deleteCustomer(deleteField.getText().toString());
+                    CustomerTable.setModel(CustomerTableModel);
+                    CustomerTableModel.setDataVector(CustomerManagementDataHandler.getRows("Customers"),CustomerManagementDataHandler.getTitles("Customers"));
+                }
             }
         });
     }

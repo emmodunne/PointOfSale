@@ -8,24 +8,27 @@ public class EmployeeManagement {
     private JButton addEmployeeButton;
     private JButton removeEmployeeButton;
     private javax.swing.table.DefaultTableModel EmployeeTableModel = new javax.swing.table.DefaultTableModel();
+    private static JFrame empMangFrame;
 
     public static void openEmployeeManagementPanel() {
-        JFrame frame = new JFrame("Employee Management");
-        frame.setContentPane(new EmployeeManagement().EmployeeManagementPanel);
-        frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-        frame.pack();
-        frame.setSize(1000, 500);
-        frame.setLocationRelativeTo(null);
-        frame.setVisible(true);
+        empMangFrame = new JFrame("Employee Management");
+        empMangFrame.setContentPane(new EmployeeManagement().EmployeeManagementPanel);
+        empMangFrame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+        empMangFrame.pack();
+        empMangFrame.setSize(500, 600);
+        empMangFrame.setLocationRelativeTo(null);
+        empMangFrame.setVisible(true);
     }
 
     public EmployeeManagement() {
-
+        employeeTable.setModel(EmployeeTableModel);
+        EmployeeTableModel.setDataVector(CustomerManagementDataHandler.getRows("Employee"),CustomerManagementDataHandler.getTitles("Employee"));
 
         addEmployeeButton.addActionListener(new ActionListener(){
             @Override
             public void actionPerformed(ActionEvent e) {
-                AddEmployee.openAddEmployeepane();
+                AddEmployee.openAddEmployeepanel();
+                empMangFrame.dispose();
             }
         });
         removeEmployeeButton.addActionListener(new ActionListener() {
