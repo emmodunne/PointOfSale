@@ -8,7 +8,7 @@ public class AddEmployee {
     private JTextField textField3;
     private JButton button1;
 
-    public static void openAddEmployeepanel() {
+    public static void openAddEmployeepane() {
         JFrame frame = new JFrame("Add Employee");
         frame.setContentPane(new AddEmployee().AddEmployeePanel);
         frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);

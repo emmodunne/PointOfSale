@@ -9,6 +9,7 @@ public class StockManagement {
         frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         frame.pack();
         frame.setSize(1000, 500);
+        frame.setLocationRelativeTo(null);
         frame.setVisible(true);
     }
 }

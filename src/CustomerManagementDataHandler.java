@@ -1,13 +1,12 @@
 import java.sql.DriverManager;
-import java.util.function.DoubleBinaryOperator;
 
 /**
  * Created by jonat on 03/04/2018.
  */
 public class CustomerManagementDataHandler {
-    private static java.sql.Connection con;
-    private static java.sql.Statement stm;
-    private static java.sql.ResultSet rs;
+    private static java.sql.Connection connection;
+    private static java.sql.Statement statement;
+    private static java.sql.ResultSet resultSet;
     private static java.sql.ResultSetMetaData rsMeta;
     private static int columnCount;
 
@@ -15,12 +14,12 @@ public class CustomerManagementDataHandler {
         String sqlQuery = "SELECT * FROM " + table;
         try{
             Class.forName("com.mysql.jdbc.Driver");
-            con = DriverManager.getConnection(DbCredentials.dbUrl, DbCredentials.dbUsername, DbCredentials.dbPassword);
-            stm = con.createStatement(
+            connection = DriverManager.getConnection(DbCredentials.dbUrl, DbCredentials.dbUsername, DbCredentials.dbPassword);
+            statement = connection.createStatement(
                     java.sql.ResultSet.TYPE_SCROLL_INSENSITIVE,
                     java.sql.ResultSet.CONCUR_UPDATABLE);
-            rs = stm.executeQuery(sqlQuery);
-            rsMeta = rs.getMetaData();
+            resultSet = statement.executeQuery(sqlQuery);
+            rsMeta = resultSet.getMetaData();
             columnCount = rsMeta.getColumnCount();
 
         }
@@ -62,16 +61,16 @@ public class CustomerManagementDataHandler {
         Object [][] content;
         try{
             // determine the number of rows
-            rs.last();
-            int number = rs.getRow();
+            resultSet.last();
+            int number = resultSet.getRow();
             content = new Object[number][columnCount];
-            rs.beforeFirst();
+            resultSet.beforeFirst();
 
             int i =0;
-            while(rs.next()) {
+            while(resultSet.next()) {
                 // each row is an array of objects
                 for(int col = 1; col <= columnCount; col++)
-                    content[i][col - 1] = rs.getObject(col);
+                    content[i][col - 1] = resultSet.getObject(col);
                 i++;
             }
             return content;

@@ -5,17 +5,24 @@ import java.awt.event.ActionListener;
 
 public class CustomerManagement {
     private JPanel CustomerManagementPanel;
-    private JButton buttoAddCustomerBUttonn1;
+    private JButton addCustomerButton;
     private JTable CustomerTable;
+    private JButton removeCustomerButton;
     private javax.swing.table.DefaultTableModel CustomerTableModel = new javax.swing.table.DefaultTableModel();
 
     public CustomerManagement() {
         CustomerTable.setModel(CustomerTableModel);
         CustomerTableModel.setDataVector(CustomerManagementDataHandler.getRows("Customers"),CustomerManagementDataHandler.getTitles("Customers"));
-        buttoAddCustomerBUttonn1.addActionListener(new ActionListener() {
+        addCustomerButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 AddCustomer.openAddCustomerPanel();
+            }
+        });
+        removeCustomerButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                DeleteCustomer.openDeleteCustomerPanel();
             }
         });
     }
@@ -26,6 +33,7 @@ public class CustomerManagement {
         frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         frame.pack();
         frame.setSize(1000, 500);
+        frame.setLocationRelativeTo(null);
         frame.setVisible(true);
     }
 }
