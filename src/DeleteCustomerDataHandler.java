@@ -10,7 +10,7 @@ public class DeleteCustomerDataHandler {
 
         public static void deleteCustomer (String deleteCustomerID) {
             //TODO Create correct delete statement and then replicate in all classes
-            String deleteCustomerQuery = "DELETE FROM Customers WHERE ID IN ('" + deleteCustomerID +"')";
+            String deleteCustomerQuery = "DELETE FROM Customers (ID) WHERE VALUES ('" + deleteCustomerID +"')";
 
             try{
                 Class.forName("com.mysql.jdbc.Driver");

@@ -1,10 +1,12 @@
 
 import javax.swing.*;
 import java.awt.event.*;
-import java.text.DecimalFormat;
+import java.util.ArrayList;
+import java.util.List;
 
 
 public class Sale {
+    private static JFrame saleFrame;
     private JPanel SalePanel;
     private JTextField barcodeText;
     private JButton enterButton;
@@ -13,56 +15,98 @@ public class Sale {
     private JButton tenderPaymentButton;
     private JLabel inputBarcodeLabel;
     private JLabel totalLabel;
+    private JRadioButton cashRadioButton;
+    private JRadioButton cardRadioButton;
+    private JTextField amountTenderedText;
+    private JComboBox employeeCombo;
+    private JComboBox customerCombo;
+    private JLabel employeeLabel;
+    private JLabel customerLabel;
     private javax.swing.table.DefaultTableModel SalesLinesTableModel =
-            new javax.swing.table.DefaultTableModel(0,4);
-    private static DecimalFormat decimalFormat = new DecimalFormat(".##");
+            new javax.swing.table.DefaultTableModel(0,4){
+                boolean[] canEdit = new boolean[]{
+                        false, false, true, false
+                };
+
+                public boolean isCellEditable(int rowIndex, int columnIndex) {
+                    return canEdit[columnIndex];
+                }
+            };
     private double saleTotal = 0;
 
     public Sale() {
         SalesLinesTable.setModel(SalesLinesTableModel);
         String[] SalesLinesColumnNames = {"QTY", "Barcode", "Description", "Price (€)"};
         SalesLinesTableModel.setColumnIdentifiers(SalesLinesColumnNames);
+        employeeCombo.setModel(new javax.swing.DefaultComboBoxModel(SalesDataHandler.getEmployees()));
+        customerCombo.setModel(new javax.swing.DefaultComboBoxModel(SalesDataHandler.getCustomers()));
+        barcodeText.requestFocus();
+        cardRadioButton.setSelected(true);
         tenderPaymentButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                Payment.openPaymentScreen(saleTotal);
+                if (SalesLinesTable.getRowCount() == 0){
+                    JOptionPane.showMessageDialog(saleFrame, "There are no lines in the current sale", "Unable to Tender Sale", JOptionPane.ERROR_MESSAGE);
+                }
+                else {
+                    if (amountTenderedText.getText().isEmpty()){
+                        amountTenderedText.setText(String.valueOf(saleTotal));
+                    }
+                    List<String> salesLines = new ArrayList<>();
+                    for (int count = 0; count < SalesLinesTableModel.getRowCount(); count++) {
+                        salesLines.add(SalesLinesTableModel.getValueAt(count, 1).toString());
+                    }
+                    double amountTendered = Double.parseDouble(amountTenderedText.getText());
+                    double changeDue = amountTendered - saleTotal;
+                    String customerId;
+                    if (cashRadioButton.isSelected()) {
+                        SalesDataHandler.saveSale(employeeCombo.getSelectedItem().toString(), ((customerCombo.getSelectedItem().toString().isEmpty()) ? null : customerCombo.getSelectedItem().toString()), salesLines, saleTotal, "Cash", amountTendered, changeDue);
+                    }
+                    else {
+                        SalesDataHandler.saveSale(employeeCombo.getSelectedItem().toString(), ((customerCombo.getSelectedItem().toString().isEmpty()) ? null : customerCombo.getSelectedItem().toString()), salesLines, saleTotal, "Card", amountTendered, changeDue);
+                    }
+                    JOptionPane.showMessageDialog(saleFrame, String.format ("Sale Total: €%.2f\nAmount Tendered: €%.2f\nChange Due: €%.2f", saleTotal, amountTendered, changeDue), "Sale Complete", JOptionPane.INFORMATION_MESSAGE);
+                    saleFrame.dispose();
+                }
             }
         });
         enterButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                Object[] stockLineReturned = null;
+                Object[] stockLineReturned;
                 stockLineReturned = SalesDataHandler.getStockLine(barcodeText.getText().toString());
                if (stockLineReturned != null){
                    SalesLinesTableModel.insertRow(SalesLinesTableModel.getRowCount(), stockLineReturned);
                    saleTotal += Double.parseDouble(stockLineReturned[3].toString());
                    salesTotalText.setText(String.format ("€%.2f", saleTotal));
+                   amountTenderedText.setText(String.format ("%.2f", saleTotal));
                }
                barcodeText.setText(null);
                barcodeText.requestFocus();
             }
         });
-        tenderPaymentButton.addActionListener(new ActionListener() {
+        cashRadioButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                amountTenderedText.requestFocus();
+            }
+        });
+        cardRadioButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                amountTenderedText.requestFocus();
             }
         });
     }
 
     public static void openSales() {
-        JFrame frame = new JFrame("Sale");
-        frame.setContentPane(new Sale().SalePanel);
-        frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-        frame.addWindowListener(new WindowAdapter() {
-            @Override
-            public void windowClosing(WindowEvent e) {
-                MainMenu.setSaleOpen(false);
-            }
-        });
-        frame.pack();
-        frame.setSize(800, 400);
-        frame.setLocationRelativeTo(null);
-        frame.setVisible(true);
+        saleFrame = new JFrame("Sale");
+        saleFrame.setContentPane(new Sale().SalePanel);
+        saleFrame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+        saleFrame.pack();
+        saleFrame.setSize(800, 400);
+        saleFrame.setLocationRelativeTo(null);
+        saleFrame.setVisible(true);
     }
 
 

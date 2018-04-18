@@ -43,15 +43,12 @@ public class CustomerManagementDataHandler {
         try{
             for(int col = columnCount; col > 0; col--) {
                 columnNames[col - 1] =(String)rsMeta.getColumnName(col);
-                System.out.println(col - 1);
-                System.out.println(columnNames[col - 1]);
             }
         }
         catch( java.sql.SQLException sqlex ) {
             System.err.println( sqlex );
             sqlex.printStackTrace();
         }
-        System.out.println(columnNames[1]);
 
         return columnNames;
     }

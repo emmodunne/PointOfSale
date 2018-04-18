@@ -1,5 +1,3 @@
-import sun.applet.Main;
-
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -31,10 +29,7 @@ public class MainMenu extends Container {
         saleButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                if (!saleOpen) {
                     Sale.openSales();
-                    saleOpen = true;
-                }
             }
         });
         saleHistoryButton.addActionListener(new ActionListener() {
@@ -63,7 +58,4 @@ public class MainMenu extends Container {
         });
     }
 
-    public static void setSaleOpen(boolean saleOpen) {
-        MainMenu.saleOpen = saleOpen;
-    }
 }
