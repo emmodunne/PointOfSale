@@ -40,6 +40,7 @@ public class Sale {
         SalesLinesTableModel.setColumnIdentifiers(SalesLinesColumnNames);
         employeeCombo.setModel(new javax.swing.DefaultComboBoxModel(SalesDataHandler.getEmployees()));
         customerCombo.setModel(new javax.swing.DefaultComboBoxModel(SalesDataHandler.getCustomers()));
+        saleFrame.getRootPane().setDefaultButton(enterButton);
         barcodeText.requestFocus();
         cardRadioButton.setSelected(true);
         tenderPaymentButton.addActionListener(new ActionListener() {
@@ -58,15 +59,17 @@ public class Sale {
                     }
                     double amountTendered = Double.parseDouble(amountTenderedText.getText());
                     double changeDue = amountTendered - saleTotal;
-                    String customerId;
+                    Employee employee = (Employee) employeeCombo.getSelectedItem();
+                    Customer customer = (Customer) customerCombo.getSelectedItem();
                     if (cashRadioButton.isSelected()) {
-                        SalesDataHandler.saveSale(employeeCombo.getSelectedItem().toString(), ((customerCombo.getSelectedItem().toString().isEmpty()) ? null : customerCombo.getSelectedItem().toString()), salesLines, saleTotal, "Cash", amountTendered, changeDue);
+                        SalesDataHandler.saveSale(employee.getId(), ((customer.getId().equals("0")) ? null : customer.getId()), salesLines, saleTotal, "Cash", amountTendered, changeDue);
                     }
                     else {
-                        SalesDataHandler.saveSale(employeeCombo.getSelectedItem().toString(), ((customerCombo.getSelectedItem().toString().isEmpty()) ? null : customerCombo.getSelectedItem().toString()), salesLines, saleTotal, "Card", amountTendered, changeDue);
+                        SalesDataHandler.saveSale(employee.getId(), ((customer.getId().equals("0")) ? null : customer.getId()), salesLines, saleTotal, "Card", amountTendered, changeDue);
                     }
                     JOptionPane.showMessageDialog(saleFrame, String.format ("Sale Total: €%.2f\nAmount Tendered: €%.2f\nChange Due: €%.2f", saleTotal, amountTendered, changeDue), "Sale Complete", JOptionPane.INFORMATION_MESSAGE);
                     saleFrame.dispose();
+                    Sale.openSales();
                 }
             }
         });
@@ -97,6 +100,12 @@ public class Sale {
                 amountTenderedText.requestFocus();
             }
         });
+        customerCombo.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                barcodeText.requestFocus();
+            }
+        });
     }
 
     public static void openSales() {
@@ -104,6 +113,7 @@ public class Sale {
         saleFrame.setContentPane(new Sale().SalePanel);
         saleFrame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         saleFrame.pack();
+        saleFrame.setAlwaysOnTop(true);
         saleFrame.setSize(800, 400);
         saleFrame.setLocationRelativeTo(null);
         saleFrame.setVisible(true);

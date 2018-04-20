@@ -83,7 +83,7 @@ public class SaleHistoryDataHandler {
             Object [] columnNames = new Object[columnCount];
             try{
                 for(int col = columnCount; col > 0; col--) {
-                    columnNames[col - 1] =(String)rsMeta.getColumnName(col);
+                    columnNames[col - 1] = (String)rsMeta.getColumnName(col);
                 }
             }
             catch( java.sql.SQLException sqlex ) {
@@ -119,6 +119,49 @@ public class SaleHistoryDataHandler {
             }
             return null;
         }
+
+    public static String[] getSalesInfo(String saleId) {
+        String sqlQuery = "SELECT Sales.TimeStamp, Employee.FirstName as EmployeeFirstName, Employee.LastName as EmployeeLastName, " +
+                "Customers.FirstName as CustomerFirstName, Customers.LastName as CustomerLastName, Sales.Total, Sales.PaymentMethod, Sales.PaymentTendered, Sales.ChangeDue " +
+                "FROM Sales, Employee, Customers WHERE Sales.ID = " + saleId + " AND EmployeeID = Employee.ID AND (CustomerID = Customers.ID OR CustomerID = NULL)";
+        System.out.println(sqlQuery);
+        try{
+            Class.forName("com.mysql.jdbc.Driver");
+            connection = DriverManager.getConnection(DbCredentials.dbUrl, DbCredentials.dbUsername, DbCredentials.dbPassword);
+            statement = connection.createStatement(java.sql.ResultSet.TYPE_SCROLL_INSENSITIVE,
+                    ResultSet.CONCUR_READ_ONLY);
+            resultSet = statement.executeQuery(sqlQuery);
+            while (resultSet.next()) {
+                System.out.println(resultSet.getObject(1).toString());
+                return new String[]{resultSet.getObject(1).toString(), resultSet.getObject(2).toString() + " " + resultSet.getObject(3).toString(), resultSet.getObject(4).toString() + " " + resultSet.getObject(5).toString(), resultSet.getObject(6).toString(), resultSet.getObject(7).toString(), resultSet.getObject(8).toString(), resultSet.getObject(9).toString()};
+            }
+        }
+        catch ( ClassNotFoundException cnfex ) {
+            System.err.println("Issue with driver." );
+            cnfex.printStackTrace();
+            System.exit( 1 ); // terminate program
+        }
+        catch ( java.sql.SQLException sqlex ) {
+            System.err.println( sqlex );
+            sqlex.printStackTrace();
+        }
+        catch ( Exception ex ) {
+            System.err.println( ex );
+            ex.printStackTrace();
+        }
+        finally {
+            try {
+                statement.close();
+                resultSet.close();
+                connection.close();
+            }
+            catch (java.sql.SQLException sqlex){
+                System.err.println( sqlex );
+                sqlex.printStackTrace();
+            }
+        }
+        return null;
+    }
 
 }
 

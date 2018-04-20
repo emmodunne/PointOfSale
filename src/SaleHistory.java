@@ -11,6 +11,13 @@ public class SaleHistory {
     private JPanel salesHistoryPanel;
     private JList salesIdHistoryList;
     private JTable salesLinesHistoryTable;
+    private JTextField employeeNameText;
+    private JTextField customerNameText;
+    private JTextField saleTotalText;
+    private JTextField paymentMethodText;
+    private JTextField amountTenderedText;
+    private JTextField changeText;
+    private JTextField timeStampText;
     private javax.swing.table.DefaultTableModel salesLineHistoryTableModel = new javax.swing.table.DefaultTableModel(){
         boolean[] canEdit = new boolean[]{
                 false, false, false, false
@@ -29,7 +36,17 @@ public class SaleHistory {
         salesIdHistoryList.addListSelectionListener(new ListSelectionListener() {
             @Override
             public void valueChanged(ListSelectionEvent e) {
-                salesLineHistoryTableModel.setDataVector(SaleHistoryDataHandler.getRows(salesIdHistoryList.getSelectedValue().toString()),SaleHistoryDataHandler.getTitles());
+                if (!salesIdHistoryList.getSelectedValue().toString().isEmpty()) {
+                    salesLineHistoryTableModel.setDataVector(SaleHistoryDataHandler.getRows(salesIdHistoryList.getSelectedValue().toString()), SaleHistoryDataHandler.getTitles());
+                    String saleInfo[] = SaleHistoryDataHandler.getSalesInfo(salesIdHistoryList.getSelectedValue().toString());
+                    timeStampText.setText(saleInfo[0]);
+                    employeeNameText.setText(saleInfo[1]);
+                    customerNameText.setText(saleInfo[2]);
+                    saleTotalText.setText(saleInfo[3]);
+                    paymentMethodText.setText(saleInfo[4]);
+                    amountTenderedText.setText(saleInfo[5]);
+                    changeText.setText(saleInfo[6]);
+                }
             }
         });
     }

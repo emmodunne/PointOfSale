@@ -10,18 +10,18 @@ public class SalesDataHandler {
     private static java.sql.ResultSet resultSet;
 
 
-    public static Vector<String> getEmployees() {
-        Vector<String> employeeIds = new Vector<>();
-        String sqlQuery = "SELECT ID FROM Employee";
+    public static Vector<Employee> getEmployees() {
+        Vector<Employee> employees = new Vector<>();
+        String sqlQuery = "SELECT ID, FirstName, LastName FROM Employee";
         try{
             Class.forName("com.mysql.jdbc.Driver");
             connection = DriverManager.getConnection(DbCredentials.dbUrl, DbCredentials.dbUsername, DbCredentials.dbPassword);
             statement = connection.createStatement();
             resultSet = statement.executeQuery(sqlQuery);
             while (resultSet.next()) {
-                employeeIds.add(resultSet.getObject(1).toString());
+                employees.addElement(new Employee(resultSet.getObject(1).toString(), resultSet.getObject(2).toString() + " " + resultSet.getObject(3).toString()));
             }
-            return employeeIds;
+            return employees;
             }
             catch ( ClassNotFoundException cnfex ) {
                 System.err.println("Issue with driver." );
@@ -50,19 +50,19 @@ public class SalesDataHandler {
             return null;
     }
 
-    public static Vector<String> getCustomers() {
-        Vector<String> customerIds = new Vector<>();
-        customerIds.add("");
-        String sqlQuery = "SELECT ID FROM Customers";
+    public static Vector<Customer> getCustomers() {
+        Vector<Customer> customers = new Vector<>();
+        customers.addElement(new Customer("0", ""));
+        String sqlQuery = "SELECT ID, FirstName, LastName FROM Customers";
         try{
             Class.forName("com.mysql.jdbc.Driver");
             connection = DriverManager.getConnection(DbCredentials.dbUrl, DbCredentials.dbUsername, DbCredentials.dbPassword);
             statement = connection.createStatement();
             resultSet = statement.executeQuery(sqlQuery);
             while (resultSet.next()) {
-                customerIds.add(resultSet.getObject(1).toString());
+                customers.addElement(new Customer(resultSet.getObject(1).toString(), resultSet.getObject(2).toString() + " " + resultSet.getObject(3).toString()));
             }
-            return customerIds;
+            return customers;
         }
         catch ( ClassNotFoundException cnfex ) {
             System.err.println("Issue with driver." );
