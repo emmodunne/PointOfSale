@@ -5,7 +5,6 @@ public class DeleteEmployeeDataHandler {
     private static java.sql.Statement statement;
 
     public static void deleteEmployee (String deleteEmployeeID) {
-        //TODO Create correct delete statement and then replicate in all classes
         String deleteEmployeeQuery = "DELETE FROM Employee WHERE ID IN ('" + deleteEmployeeID +"')";
 
         try{

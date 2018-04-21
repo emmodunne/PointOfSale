@@ -7,7 +7,16 @@ public class EmployeeManagement {
     private JTable employeeTable;
     private JButton addEmployeeButton;
     private JButton removeEmployeeButton;
-    private javax.swing.table.DefaultTableModel EmployeeTableModel = new javax.swing.table.DefaultTableModel();
+    private javax.swing.table.DefaultTableModel EmployeeTableModel = new javax.swing.table.DefaultTableModel(){
+        boolean[] canEdit = new boolean[]{
+                false, false, false, false, false
+        };
+
+        public boolean isCellEditable(int rowIndex, int columnIndex) {
+            return canEdit[columnIndex];
+        }
+    };
+
     private static JFrame empMangFrame;
 
     public static void openEmployeeManagementPanel() {

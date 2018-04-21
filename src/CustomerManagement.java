@@ -9,11 +9,20 @@ public class CustomerManagement {
     private JTable CustomerTable;
     private JButton removeCustomerButton;
     private static JFrame custMangFrame;
-    private javax.swing.table.DefaultTableModel CustomerTableModel = new javax.swing.table.DefaultTableModel();
+    private javax.swing.table.DefaultTableModel CustomerTableModel = new javax.swing.table.DefaultTableModel(){
+        boolean[] canEdit = new boolean[]{
+                false, false, false, false
+        };
+
+        public boolean isCellEditable(int rowIndex, int columnIndex) {
+            return canEdit[columnIndex];
+        }
+    };
 
     public CustomerManagement() {
         CustomerTable.setModel(CustomerTableModel);
         CustomerTableModel.setDataVector(CustomerManagementDataHandler.getRows("Customers"),CustomerManagementDataHandler.getTitles("Customers"));
+
         addCustomerButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {

@@ -29,20 +29,20 @@
       </scrollpane>
       <component id="21852" class="javax.swing.JButton" binding="addEmployeeButton">
         <constraints>
-          <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
-          <forms/>
-        </constraints>
-        <properties>
-          <text value="Add"/>
-        </properties>
-      </component>
-      <component id="f6ea6" class="javax.swing.JButton" binding="removeEmployeeButton">
-        <constraints>
           <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
           <forms/>
         </constraints>
         <properties>
-          <text value="Remove"/>
+          <text value="Add Employee"/>
+        </properties>
+      </component>
+      <component id="f6ea6" class="javax.swing.JButton" binding="removeEmployeeButton">
+        <constraints>
+          <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+          <forms/>
+        </constraints>
+        <properties>
+          <text value="Remove Employee"/>
         </properties>
       </component>
     </children>

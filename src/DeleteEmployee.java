@@ -9,7 +9,6 @@ public class DeleteEmployee {
     private JLabel deleteEmployeeLabel;
     private JTextField deleteField;
     private javax.swing.table.DefaultTableModel EmployeeTableModel = new javax.swing.table.DefaultTableModel();
-    private static JFrame deleteCustomerFrame;
 
 
     public DeleteEmployee() {
@@ -23,22 +22,22 @@ public class DeleteEmployee {
                 if(deleteField.getText().toString().isEmpty()){
                     JOptionPane.showMessageDialog(null, "Delete field cannot be null value", "Error", JOptionPane.ERROR_MESSAGE);
                 }else {
-                    DeleteEmployeeDataHandler.deleteEmployee(deleteField.getText().toString());
                     JOptionPane.showMessageDialog(null, "Successfully deleted employee", "Added", JOptionPane.INFORMATION_MESSAGE);
-                    deleteCustomerFrame.dispose();
-                    EmployeeManagement.openEmployeeManagementPanel();
+                    DeleteEmployeeDataHandler.deleteEmployee(deleteField.getText().toString());
+                    employeeTable.setModel(EmployeeTableModel);
+                    EmployeeTableModel.setDataVector(CustomerManagementDataHandler.getRows("Employee"), CustomerManagementDataHandler.getTitles("Employee"));
                 }
             }
         });
     }
 
     public static void openDeleteEmployeePanel() {
-        deleteCustomerFrame = new JFrame("Delete Customer");
-        deleteCustomerFrame.setContentPane(new DeleteEmployee().deleteEmployeePanel);
-        deleteCustomerFrame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-        deleteCustomerFrame.pack();
-        deleteCustomerFrame.setSize(500, 600);
-        deleteCustomerFrame.setLocationRelativeTo(null);
-        deleteCustomerFrame.setVisible(true);
+        JFrame frame = new JFrame("Delete Customer");
+        frame.setContentPane(new DeleteEmployee().deleteEmployeePanel);
+        frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+        frame.pack();
+        frame.setSize(500, 600);
+        frame.setLocationRelativeTo(null);
+        frame.setVisible(true);
     }
 }
