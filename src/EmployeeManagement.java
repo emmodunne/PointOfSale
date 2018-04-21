@@ -34,7 +34,8 @@ public class EmployeeManagement {
         removeEmployeeButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
+                DeleteEmployee.openDeleteEmployeePanel();
+                empMangFrame.dispose();
             }
         });
     }

@@ -45,7 +45,7 @@ public class AddEmployee {
         empFrame.setContentPane(new AddEmployee().AddEmployeePanel);
         empFrame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         empFrame.pack();
-        empFrame.setSize(1000, 500);
+        empFrame.setSize(400, 400);
         empFrame.setLocationRelativeTo(null);
         empFrame.setVisible(true);
     }
