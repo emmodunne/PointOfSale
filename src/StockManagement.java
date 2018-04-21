@@ -8,7 +8,15 @@ public class StockManagement {
     private JButton RemoveStockButton;
     private JButton AddStockButton;
     private static JFrame stockMangFrame;
-    private javax.swing.table.DefaultTableModel StockTableModel = new javax.swing.table.DefaultTableModel();
+    private javax.swing.table.DefaultTableModel StockTableModel = new javax.swing.table.DefaultTableModel(){
+        boolean[] canEdit = new boolean[]{
+                false, false, false, false, false
+        };
+
+        public boolean isCellEditable(int rowIndex, int columnIndex) {
+            return canEdit[columnIndex];
+        }
+    };
 
 
     public StockManagement() {
@@ -25,7 +33,7 @@ public class StockManagement {
         RemoveStockButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-               // DeleteStock.openDeleteStockPanel();
+                DeleteStock.openDeleteStockPanel();
                 stockMangFrame.dispose();
             }
         });

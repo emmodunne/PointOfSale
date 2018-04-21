@@ -8,7 +8,15 @@ public class DeleteEmployee {
     private JButton deleteButton;
     private JLabel deleteEmployeeLabel;
     private JTextField deleteField;
-    private javax.swing.table.DefaultTableModel EmployeeTableModel = new javax.swing.table.DefaultTableModel();
+    private javax.swing.table.DefaultTableModel EmployeeTableModel = new javax.swing.table.DefaultTableModel(){
+        boolean[] canEdit = new boolean[]{
+                false, false, false, false, false
+        };
+
+        public boolean isCellEditable(int rowIndex, int columnIndex) {
+            return canEdit[columnIndex];
+        }
+    };
 
 
     public DeleteEmployee() {

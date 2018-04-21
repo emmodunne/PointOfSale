@@ -12,7 +12,15 @@ public class DeleteCustomer {
     private JLabel deleteCustomerLabel;
     private JTextField deleteField;
     private JButton DeleteButton;
-    private javax.swing.table.DefaultTableModel CustomerTableModel = new javax.swing.table.DefaultTableModel();
+    private javax.swing.table.DefaultTableModel CustomerTableModel = new javax.swing.table.DefaultTableModel(){
+        boolean[] canEdit = new boolean[]{
+                false, false, false, false
+        };
+
+        public boolean isCellEditable(int rowIndex, int columnIndex) {
+            return canEdit[columnIndex];
+        }
+    };
 
     public DeleteCustomer() {
         CustomerTable.setModel(CustomerTableModel);

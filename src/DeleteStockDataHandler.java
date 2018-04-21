@@ -5,7 +5,7 @@ public class DeleteStockDataHandler {
     private static java.sql.Statement statement;
 
     public static void deleteStock (String deleteStockBarcode) {
-        String deleteStockQuery = "DELETE FROM Stock WHERE ID IN ('" + deleteStockBarcode +"')";
+        String deleteStockQuery = "DELETE FROM Stock WHERE Barcode IN ('" + deleteStockBarcode +"')";
 
         try{
             Class.forName("com.mysql.jdbc.Driver");
