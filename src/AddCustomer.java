@@ -11,6 +11,7 @@ public class AddCustomer {
     private JLabel FirstNameLabel;
     private JLabel LastNameLabel;
     private JLabel PhoneNumberLabel;
+    private static JFrame addCustFrame;
 
     public AddCustomer() {
         AddButton.addActionListener(new ActionListener() {
@@ -29,18 +30,19 @@ public class AddCustomer {
                     JOptionPane.showMessageDialog(null, "Successfully added customer", "Added" , JOptionPane.INFORMATION_MESSAGE);
                     AddCustomerDataHandler.addCustomer(FirstNameField.getText().toString(), LastNameField.getText().toString(), PhoneNumberField.getText().toString());
                     CustomerManagement.openCustomerMangementPanel();
+                    addCustFrame.dispose();
                 }
             }
         });
     }
 
     public static void openAddCustomerPanel() {
-        JFrame frame = new JFrame("Add Customer");
-        frame.setContentPane(new AddCustomer().AddCustomerPanel);
-        frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-        frame.pack();
-        frame.setSize(400, 400);
-        frame.setLocationRelativeTo(null);
-        frame.setVisible(true);
+        addCustFrame = new JFrame("Add Customer");
+        addCustFrame.setContentPane(new AddCustomer().AddCustomerPanel);
+        addCustFrame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+        addCustFrame.pack();
+        addCustFrame.setSize(400, 400);
+        addCustFrame.setLocationRelativeTo(null);
+        addCustFrame.setVisible(true);
     }
 }

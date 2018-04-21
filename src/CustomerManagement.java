@@ -8,6 +8,7 @@ public class CustomerManagement {
     private JButton addCustomerButton;
     private JTable CustomerTable;
     private JButton removeCustomerButton;
+    private static JFrame custMangFrame;
     private javax.swing.table.DefaultTableModel CustomerTableModel = new javax.swing.table.DefaultTableModel();
 
     public CustomerManagement() {
@@ -17,24 +18,26 @@ public class CustomerManagement {
             @Override
             public void actionPerformed(ActionEvent e) {
                 AddCustomer.openAddCustomerPanel();
+                custMangFrame.dispose();
             }
         });
         removeCustomerButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 DeleteCustomer.openDeleteCustomerPanel();
+                custMangFrame.dispose();
             }
         });
     }
 
     public static void openCustomerMangementPanel() {
-        JFrame frame = new JFrame("Customer Mangement");
-        frame.setContentPane(new CustomerManagement().CustomerManagementPanel);
-        frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-        frame.pack();
-        frame.setSize(500, 600);
-        frame.setLocationRelativeTo(null);
-        frame.setVisible(true);
+        custMangFrame = new JFrame("Customer Mangement");
+        custMangFrame.setContentPane(new CustomerManagement().CustomerManagementPanel);
+        custMangFrame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+        custMangFrame.pack();
+        custMangFrame.setSize(500, 600);
+        custMangFrame.setLocationRelativeTo(null);
+        custMangFrame.setVisible(true);
     }
 
 }
