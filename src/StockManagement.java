@@ -18,14 +18,14 @@ public class StockManagement {
         AddStockButton.addActionListener(new ActionListener(){
             @Override
             public void actionPerformed(ActionEvent e) {
-             //   AddStock.openAddStockPanel();
+                AddStock.openAddStockPanel();
                 stockMangFrame.dispose();
             }
         });
         RemoveStockButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-         //       DeleteStock.openDeleteStockPanel();
+               // DeleteStock.openDeleteStockPanel();
                 stockMangFrame.dispose();
             }
         });
