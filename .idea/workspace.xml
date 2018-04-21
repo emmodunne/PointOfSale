@@ -2,14 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cef084e0-35e1-45dc-a595-77dbff0d574d" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/StockManagementDataHandler.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AddEmployee.java" afterPath="$PROJECT_DIR$/src/AddEmployee.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/DeleteCustomer.java" afterPath="$PROJECT_DIR$/src/DeleteCustomer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/DeleteEmployee.form" afterPath="$PROJECT_DIR$/src/DeleteEmployee.form" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/DeleteEmployee.java" afterPath="$PROJECT_DIR$/src/DeleteEmployee.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/DeleteEmployeeDataHandler.java" afterPath="$PROJECT_DIR$/src/DeleteEmployeeDataHandler.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/EmployeeManagement.java" afterPath="$PROJECT_DIR$/src/EmployeeManagement.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/CustomerManagement.form" afterPath="$PROJECT_DIR$/src/CustomerManagement.form" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/EmployeeManagement.form" afterPath="$PROJECT_DIR$/src/EmployeeManagement.form" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/StockManagement.form" afterPath="$PROJECT_DIR$/src/StockManagement.form" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/StockManagement.java" afterPath="$PROJECT_DIR$/src/StockManagement.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -28,8 +25,8 @@
       <file leaf-file-name="EmployeeManagement.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/EmployeeManagement.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="116">
-              <caret line="17" column="29" lean-forward="true" selection-start-line="17" selection-start-column="29" selection-end-line="17" selection-end-column="37" />
+            <state relative-caret-position="-85">
+              <caret line="4" column="33" lean-forward="false" selection-start-line="4" selection-start-column="33" selection-end-line="4" selection-end-column="33" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -41,7 +38,7 @@
         <entry file="file://$PROJECT_DIR$/src/StockManagementDataHandler.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="119">
-              <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+              <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
               <folding>
                 <marker date="1524332633981" expanded="true" signature="439:453" ph="SELECT * FRO... missingValue" />
               </folding>
@@ -49,13 +46,29 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="StockManagement.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="StockManagement.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/StockManagement.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="13" column="5" lean-forward="true" selection-start-line="13" selection-start-column="5" selection-end-line="13" selection-end-column="5" />
-              <folding />
+            <state relative-caret-position="51">
+              <caret line="13" column="26" lean-forward="false" selection-start-line="13" selection-start-column="26" selection-end-line="13" selection-end-column="26" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CustomerManagement.form" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/CustomerManagement.form">
+          <provider selected="true" editor-type-id="ui-designer">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="StockManagement.form" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/StockManagement.form">
+          <provider selected="true" editor-type-id="ui-designer">
+            <state />
           </provider>
         </entry>
       </file>
@@ -63,11 +76,18 @@
         <entry file="file://$PROJECT_DIR$/src/EmployeeManagementDataHandler.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="357">
-              <caret line="21" column="57" lean-forward="true" selection-start-line="21" selection-start-column="57" selection-end-line="21" selection-end-column="57" />
+              <caret line="21" column="57" lean-forward="false" selection-start-line="21" selection-start-column="57" selection-end-line="21" selection-end-column="57" />
               <folding>
                 <marker date="1524067515589" expanded="true" signature="441:455" ph="SELECT * FRO... missingValue" />
               </folding>
             </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="EmployeeManagement.form" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/EmployeeManagement.form">
+          <provider selected="true" editor-type-id="ui-designer">
+            <state />
           </provider>
         </entry>
       </file>
@@ -95,11 +115,8 @@
         <option value="$PROJECT_DIR$/SaleHistory.jfd" />
         <option value="$PROJECT_DIR$/SaleHistory.java" />
         <option value="$PROJECT_DIR$/src/SaleHistory.form" />
-        <option value="$PROJECT_DIR$/src/CustomerManagement.form" />
         <option value="$PROJECT_DIR$/src/CustomerManagement.java" />
-        <option value="$PROJECT_DIR$/src/StockManagement.form" />
         <option value="$PROJECT_DIR$/src/MainMenu.form" />
-        <option value="$PROJECT_DIR$/src/EmployeeManagement.form" />
         <option value="$PROJECT_DIR$/src/Tester.java" />
         <option value="$PROJECT_DIR$/src/SaleHistory.java" />
         <option value="$PROJECT_DIR$/src/MainMenu.java" />
@@ -116,7 +133,10 @@
         <option value="$PROJECT_DIR$/src/DeleteEmployee.java" />
         <option value="$PROJECT_DIR$/src/DeleteEmployee.form" />
         <option value="$PROJECT_DIR$/src/StockManagementDataHandler.java" />
+        <option value="$PROJECT_DIR$/src/StockManagement.form" />
         <option value="$PROJECT_DIR$/src/StockManagement.java" />
+        <option value="$PROJECT_DIR$/src/CustomerManagement.form" />
+        <option value="$PROJECT_DIR$/src/EmployeeManagement.form" />
       </list>
     </option>
   </component>
@@ -233,6 +253,42 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="EmployeeManagement" />
+              <option name="myItemType" value="com.intellij.uiDesigner.projectView.FormNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PointOfSale" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PointOfSale" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CustomerManagement" />
+              <option name="myItemType" value="com.intellij.uiDesigner.projectView.FormNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PointOfSale" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PointOfSale" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AddCustomer" />
               <option name="myItemType" value="com.intellij.uiDesigner.projectView.FormNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -916,11 +972,18 @@
       <option name="project" value="LOCAL" />
       <updated>1524326766443</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Employee and Customer Complete">
+      <created>1524335910397</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1524335910397</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="30460000" />
+    <option name="totallyTimeSpent" value="32409000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -945,7 +1008,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31914893" sideWeight="0.5060514" order="14" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32569557" sideWeight="0.496875" order="16" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15711948" sideWeight="0.49394855" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15711948" sideWeight="0.49394855" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="17" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
@@ -1064,7 +1127,8 @@
     <MESSAGE value="First Button on Main Menu working, will update the rest of buttons soon" />
     <MESSAGE value="Workspace Commit" />
     <MESSAGE value="Delete Statement changes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Delete Statement changes" />
+    <MESSAGE value="Employee and Customer Complete" />
+    <option name="LAST_COMMIT_MESSAGE" value="Employee and Customer Complete" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1117,11 +1181,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/CustomerManagement.form">
-      <provider selected="true" editor-type-id="ui-designer">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/SaleHistory.jfd" />
     <entry file="file://$PROJECT_DIR$/PointOfSale.iml">
       <provider selected="true" editor-type-id="text-editor">
@@ -1132,11 +1191,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/SaleHistory.java" />
     <entry file="file://$PROJECT_DIR$/src/SaleHistory.form">
-      <provider selected="true" editor-type-id="ui-designer">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/StockManagement.form">
       <provider selected="true" editor-type-id="ui-designer">
         <state />
       </provider>
@@ -1172,11 +1226,6 @@
           <caret line="22" column="22" lean-forward="true" selection-start-line="22" selection-start-column="22" selection-end-line="22" selection-end-column="22" />
           <folding />
         </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/EmployeeManagement.form">
-      <provider selected="true" editor-type-id="ui-designer">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/.idea/uiDesigner.xml">
@@ -1333,16 +1382,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/AddCustomer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="43" column="29" lean-forward="true" selection-start-line="43" selection-start-column="29" selection-end-line="43" selection-end-column="37" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/AddEmployee.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="654">
@@ -1366,20 +1405,35 @@
         <state />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/AddCustomer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="35" column="11" lean-forward="true" selection-start-line="35" selection-start-column="11" selection-end-line="35" selection-end-column="11" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/EmployeeManagementDataHandler.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
-          <caret line="21" column="57" lean-forward="true" selection-start-line="21" selection-start-column="57" selection-end-line="21" selection-end-column="57" />
+          <caret line="21" column="57" lean-forward="false" selection-start-line="21" selection-start-column="57" selection-end-line="21" selection-end-column="57" />
           <folding>
             <marker date="1524067515589" expanded="true" signature="441:455" ph="SELECT * FRO... missingValue" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/StockManagement.form">
+      <provider selected="true" editor-type-id="ui-designer">
+        <state />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/StockManagementDataHandler.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
-          <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
           <folding>
             <marker date="1524332633981" expanded="true" signature="439:453" ph="SELECT * FRO... missingValue" />
           </folding>
@@ -1388,8 +1442,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/EmployeeManagement.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="116">
-          <caret line="17" column="29" lean-forward="true" selection-start-line="17" selection-start-column="29" selection-end-line="17" selection-end-column="37" />
+        <state relative-caret-position="-85">
+          <caret line="4" column="33" lean-forward="false" selection-start-line="4" selection-start-column="33" selection-end-line="4" selection-end-column="33" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1398,10 +1452,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/StockManagement.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="5" lean-forward="true" selection-start-line="13" selection-start-column="5" selection-end-line="13" selection-end-column="5" />
-          <folding />
+        <state relative-caret-position="51">
+          <caret line="13" column="26" lean-forward="false" selection-start-line="13" selection-start-column="26" selection-end-line="13" selection-end-column="26" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/CustomerManagement.form">
+      <provider selected="true" editor-type-id="ui-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/EmployeeManagement.form">
+      <provider selected="true" editor-type-id="ui-designer">
+        <state />
       </provider>
     </entry>
   </component>

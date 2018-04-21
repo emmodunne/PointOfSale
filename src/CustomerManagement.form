@@ -5,7 +5,7 @@
     <rowspec value="top:4dlu:noGrow"/>
     <rowspec value="center:max(d;4px):noGrow"/>
     <rowspec value="top:4dlu:noGrow"/>
-    <rowspec value="center:d:noGrow"/>
+    <rowspec value="center:max(d;4px):noGrow"/>
     <colspec value="fill:193px:grow"/>
     <constraints>
       <xy x="20" y="20" width="500" height="400"/>
@@ -13,15 +13,6 @@
     <properties/>
     <border type="bevel-lowered"/>
     <children>
-      <component id="5441c" class="javax.swing.JButton" binding="addCustomerButton">
-        <constraints>
-          <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
-          <forms/>
-        </constraints>
-        <properties>
-          <text value="Add"/>
-        </properties>
-      </component>
       <scrollpane id="bd080">
         <constraints>
           <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="7" hsize-policy="7" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
@@ -38,11 +29,20 @@
       </scrollpane>
       <component id="177f3" class="javax.swing.JButton" binding="removeCustomerButton">
         <constraints>
+          <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+          <forms/>
+        </constraints>
+        <properties>
+          <text value="Remove Customer"/>
+        </properties>
+      </component>
+      <component id="5441c" class="javax.swing.JButton" binding="addCustomerButton">
+        <constraints>
           <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
           <forms/>
         </constraints>
         <properties>
-          <text value="Remove"/>
+          <text value="Add Customer"/>
         </properties>
       </component>
     </children>
