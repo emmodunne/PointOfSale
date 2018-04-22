@@ -3,6 +3,7 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+
 /**
  * Created by jonat on 31/03/2018.
  */
@@ -13,6 +14,7 @@ public class MainMenu extends Container {
     private JButton saleHistoryButton;
     private JButton saleButton;
     private JButton employeeManagementButton;
+    private JLabel imageLogo;
     private static boolean saleOpen;
 
     public static void main(String[] args) {
@@ -20,7 +22,7 @@ public class MainMenu extends Container {
         frame.setContentPane(new MainMenu().MainPanel);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.pack();
-        frame.setSize(500, 600);
+        frame.setSize(500, 700);
         frame.setLocationRelativeTo(null);
         frame.setVisible(true);
     }
@@ -58,4 +60,7 @@ public class MainMenu extends Container {
         });
     }
 
+    private void createUIComponents() {
+        imageLogo = new JLabel(new ImageIcon("Logo.png"));
+    }
 }

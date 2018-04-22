@@ -56,7 +56,7 @@ public class SaleHistory {
         salesHistoryFrame.setContentPane(new SaleHistory().salesHistoryPanel);
         salesHistoryFrame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         salesHistoryFrame.pack();
-        salesHistoryFrame.setSize(1000, 500);
+        salesHistoryFrame.setSize(700, 400);
         salesHistoryFrame.setLocationRelativeTo(null);
         salesHistoryFrame.setVisible(true);
     }

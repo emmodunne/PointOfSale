@@ -13,7 +13,7 @@ public class StockManagementDataHandler {
     private static int columnCount;
 
     public static void searchRecords(String table) {
-        String sqlQuery = "SELECT * FROM " + table;
+        String sqlQuery = "SELECT * FROM " + table + " ORDER BY Barcode ASC";
         try{
             Class.forName("com.mysql.jdbc.Driver");
             connection = DriverManager.getConnection(DbCredentials.dbUrl, DbCredentials.dbUsername, DbCredentials.dbPassword);
@@ -45,15 +45,12 @@ public class StockManagementDataHandler {
         try{
             for(int col = columnCount; col > 0; col--) {
                 columnNames[col - 1] =(String)rsMeta.getColumnName(col);
-                System.out.println(col - 1);
-                System.out.println(columnNames[col - 1]);
             }
         }
         catch( java.sql.SQLException sqlex ) {
             System.err.println( sqlex );
             sqlex.printStackTrace();
         }
-        System.out.println(columnNames[1]);
 
         return columnNames;
     }
@@ -81,6 +78,7 @@ public class StockManagementDataHandler {
             System.err.println( sqlex );
             sqlex.printStackTrace();
         }
+
         return null;
     }
 }

@@ -27,6 +27,5 @@ public class AddStockDataHandler {
             System.err.println( ex );
             ex.printStackTrace();
         }
-
     }
 }

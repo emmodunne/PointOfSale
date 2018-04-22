@@ -27,7 +27,6 @@ public class CustomerManagement {
             @Override
             public void actionPerformed(ActionEvent e) {
                 AddCustomer.openAddCustomerPanel();
-                custMangFrame.dispose();
             }
         });
         removeCustomerButton.addActionListener(new ActionListener() {

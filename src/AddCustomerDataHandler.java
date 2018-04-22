@@ -1,8 +1,5 @@
 import java.sql.DriverManager;
 
-/**
- * Created by jonat on 03/04/2018.
- */
 public class AddCustomerDataHandler {
     private static java.sql.Connection connection;
     private static java.sql.Statement statement;

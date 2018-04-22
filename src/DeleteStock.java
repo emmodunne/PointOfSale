@@ -4,12 +4,13 @@ import java.awt.event.ActionListener;
 
 public class DeleteStock {
 
-    private JPanel DeleteStockPanel;
+    private static JFrame delStockFrame;
+    private JPanel deleteStockPanel;
     private JTable stockTable;
     private JTextField deleteStockField;
     private JButton deleteButton;
     private JLabel deleteStockLabel;
-    private javax.swing.table.DefaultTableModel StockTableModel = new javax.swing.table.DefaultTableModel(){
+    private javax.swing.table.DefaultTableModel stockTableModel = new javax.swing.table.DefaultTableModel(){
         boolean[] canEdit = new boolean[]{
                 false, false, false, false, false
         };
@@ -20,31 +21,34 @@ public class DeleteStock {
     };
 
     public DeleteStock() {
-        stockTable.setModel(StockTableModel);
-        StockTableModel.setDataVector(CustomerManagementDataHandler.getRows("Stock"),CustomerManagementDataHandler.getTitles("Stock"));
-
+        stockTable.setModel(stockTableModel);
+        stockTableModel.setDataVector(CustomerManagementDataHandler.getRows("Stock"),CustomerManagementDataHandler.getTitles("Stock"));
+        delStockFrame.getRootPane().setDefaultButton(deleteButton);
+        deleteStockField.requestFocus();
         deleteButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 if(deleteStockField.getText().toString().isEmpty()){
                     JOptionPane.showMessageDialog(null, "Delete field cannot be null value", "Error", JOptionPane.ERROR_MESSAGE);
                 }else {
-                    JOptionPane.showMessageDialog(null, "Successfully deleted stock", "Delete Successful", JOptionPane.INFORMATION_MESSAGE);
                     DeleteStockDataHandler.deleteStock(deleteStockField.getText().toString());
-                    stockTable.setModel(StockTableModel);
-                    StockTableModel.setDataVector(CustomerManagementDataHandler.getRows("Stock"), CustomerManagementDataHandler.getTitles("Stock"));
+                    JOptionPane.showMessageDialog(delStockFrame, "Successfully deleted Stock", "Successfully deleted Stock", JOptionPane.INFORMATION_MESSAGE);
+                    stockTable.setModel(stockTableModel);
+                    stockTableModel.setDataVector(CustomerManagementDataHandler.getRows("Stock"), CustomerManagementDataHandler.getTitles("Stock"));
+                    deleteStockField.setText(null);
+                    deleteStockField.requestFocus();
                 }
             }
         });
     }
 
     public static void openDeleteStockPanel() {
-        JFrame frame = new JFrame("Delete Stock");
-        frame.setContentPane(new DeleteStock().DeleteStockPanel);
-        frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-        frame.pack();
-        frame.setSize(500, 600);
-        frame.setLocationRelativeTo(null);
-        frame.setVisible(true);
+        delStockFrame = new JFrame("Delete Stock");
+        delStockFrame.setContentPane(new DeleteStock().deleteStockPanel);
+        delStockFrame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+        delStockFrame.pack();
+        delStockFrame.setSize(500, 600);
+        delStockFrame.setLocationRelativeTo(null);
+        delStockFrame.setVisible(true);
     }
 }

@@ -4,7 +4,7 @@ import java.awt.event.ActionListener;
 
 public class AddStock {
 
-    private JPanel AddStockPanel;
+    private JPanel addStockPanel;
     private JTextField barcodeField;
     private JTextField descriptionField;
     private JTextField quantityField;
@@ -23,19 +23,18 @@ public class AddStock {
             @Override
             public void actionPerformed(ActionEvent e){
                 if (barcodeField.getText().toString().isEmpty()) {
-                    JOptionPane.showMessageDialog(null, "First name cannot be null value", "Error", JOptionPane.ERROR_MESSAGE);
+                    JOptionPane.showMessageDialog(addStockFrame, "Barcode cannot be null value", "Error", JOptionPane.ERROR_MESSAGE);
                 } else if (descriptionField.getText().toString().isEmpty()) {
-                    JOptionPane.showMessageDialog(null, "Last name cannot be null value", "Error", JOptionPane.ERROR_MESSAGE);
+                    JOptionPane.showMessageDialog(addStockFrame, "Description cannot be null value", "Error", JOptionPane.ERROR_MESSAGE);
                 } else if (quantityField.getText().toString().isEmpty()) {
-                    JOptionPane.showMessageDialog(null, "Phone number cannot be null value", "Error", JOptionPane.ERROR_MESSAGE);
+                    JOptionPane.showMessageDialog(addStockFrame, "Quantity cannot be null value", "Error", JOptionPane.ERROR_MESSAGE);
                 } else if (costPriceField.getText().toString().isEmpty()) {
-                    JOptionPane.showMessageDialog(null, "Last name cannot be null value", "Error", JOptionPane.ERROR_MESSAGE);
+                    JOptionPane.showMessageDialog(addStockFrame, "Cost Price cannot be null value", "Error", JOptionPane.ERROR_MESSAGE);
                 } else if (sellingPriceField.getText().toString().isEmpty()) {
-                    JOptionPane.showMessageDialog(null, "Phone number cannot be null value", "Error", JOptionPane.ERROR_MESSAGE);
+                    JOptionPane.showMessageDialog(addStockFrame, "Sell Price cannot be null value", "Error", JOptionPane.ERROR_MESSAGE);
                 } else {
-                    JOptionPane.showMessageDialog(null, "Successfully added customer", "Added", JOptionPane.INFORMATION_MESSAGE);
                     AddStockDataHandler.addStock(barcodeField.getText().toString(), descriptionField.getText().toString(), quantityField.getText().toString(), costPriceField.getText().toString(), sellingPriceField.getText().toString());
-                    StockManagement.openStockManagementPanel();
+                    JOptionPane.showMessageDialog(addStockFrame, "Successfully added Customer", "Successfully added Customer", JOptionPane.INFORMATION_MESSAGE);
                     addStockFrame.dispose();
                 }
             }
@@ -45,10 +44,9 @@ public class AddStock {
 
     public static void openAddStockPanel() {
         addStockFrame = new JFrame("Add Stock");
-        addStockFrame.setContentPane(new AddStock().AddStockPanel);
+        addStockFrame.setContentPane(new AddStock().addStockPanel);
         addStockFrame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         addStockFrame.pack();
-        addStockFrame.setSize(400, 400);
         addStockFrame.setLocationRelativeTo(null);
         addStockFrame.setVisible(true);
     }

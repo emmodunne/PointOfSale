@@ -12,7 +12,7 @@ public class EmployeeManagementDataHandler {
     private static int columnCount;
 
     public static void searchRecords(String table) {
-        String sqlQuery = "SELECT * FROM " + table;
+        String sqlQuery = "SELECT * FROM " + table + " ORDER BY ID ASC";
         try{
             Class.forName("com.mysql.jdbc.Driver");
             connection = DriverManager.getConnection(DbCredentials.dbUrl, DbCredentials.dbUsername, DbCredentials.dbPassword);
@@ -52,7 +52,17 @@ public class EmployeeManagementDataHandler {
             System.err.println( sqlex );
             sqlex.printStackTrace();
         }
-        System.out.println(columnNames[1]);
+        finally {
+            try {
+                statement.close();
+                resultSet.close();
+                connection.close();
+            }
+            catch (java.sql.SQLException sqlex){
+                System.err.println( sqlex );
+                sqlex.printStackTrace();
+            }
+        }
 
         return columnNames;
     }

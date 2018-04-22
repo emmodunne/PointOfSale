@@ -77,17 +77,6 @@ public class SalesDataHandler {
             System.err.println( ex );
             ex.printStackTrace();
         }
-        finally {
-            try {
-                statement.close();
-                resultSet.close();
-                connection.close();
-            }
-            catch (java.sql.SQLException sqlex){
-                System.err.println( sqlex );
-                sqlex.printStackTrace();
-            }
-        }
         return null;
     }
 
@@ -106,7 +95,6 @@ public class SalesDataHandler {
                 }
                 return stockLine;
             }
-            throw new BarcodeNotFoundException("Barcode " + barcode + " not Found");
         }
         catch ( ClassNotFoundException cnfex ) {
             System.err.println("Issue with driver." );
@@ -120,17 +108,6 @@ public class SalesDataHandler {
         catch ( Exception ex ) {
             System.err.println( ex );
             ex.printStackTrace();
-        }
-        finally {
-            try {
-                statement.close();
-                resultSet.close();
-                connection.close();
-            }
-            catch (java.sql.SQLException sqlex){
-                System.err.println( sqlex );
-                sqlex.printStackTrace();
-            }
         }
         return null;
     }
@@ -151,7 +128,11 @@ public class SalesDataHandler {
             }
             Iterator<String> salesLinesInterator = salesLines.iterator();
             while (salesLinesInterator.hasNext()) {
-                sqlQuery = "INSERT INTO SalesLines (SalesID, StockBarcode) VALUES ('" + saleId  + "', '" + salesLinesInterator.next() + "')";
+                String barcode = salesLinesInterator.next();
+                sqlQuery = "INSERT INTO SalesLines (SalesID, StockBarcode) VALUES ('" + saleId  + "', '" + barcode + "')";
+                statement = connection.createStatement();
+                statement.executeUpdate(sqlQuery);
+                sqlQuery = "UPDATE Stock SET Qty = Qty - 1 WHERE Barcode = '" + barcode + "'";
                 statement = connection.createStatement();
                 statement.executeUpdate(sqlQuery);
             }

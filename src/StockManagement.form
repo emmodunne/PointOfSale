@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="StockManagement">
-  <grid id="27dc6" binding="StockManagementPanel" layout-manager="FormLayout">
+  <grid id="27dc6" binding="stockManagementPanel" layout-manager="FormLayout">
     <rowspec value="center:d:grow"/>
     <rowspec value="top:4dlu:noGrow"/>
     <rowspec value="center:max(d;4px):noGrow"/>
@@ -21,13 +21,13 @@
         <properties/>
         <border type="none"/>
         <children>
-          <component id="fb9ff" class="javax.swing.JTable" binding="StockManagementTable">
+          <component id="fb9ff" class="javax.swing.JTable" binding="stockManagementTable">
             <constraints/>
             <properties/>
           </component>
         </children>
       </scrollpane>
-      <component id="35b1c" class="javax.swing.JButton" binding="RemoveStockButton">
+      <component id="35b1c" class="javax.swing.JButton" binding="removeStockButton">
         <constraints>
           <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
           <forms/>
@@ -36,7 +36,7 @@
           <text value="Remove Stock"/>
         </properties>
       </component>
-      <component id="9aac2" class="javax.swing.JButton" binding="AddStockButton">
+      <component id="9aac2" class="javax.swing.JButton" binding="addStockButton">
         <constraints>
           <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
           <forms/>

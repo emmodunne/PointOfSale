@@ -3,33 +3,33 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class AddCustomer {
-    private JPanel AddCustomerPanel;
-    private JTextField FirstNameField;
-    private JTextField LastNameField;
-    private JTextField PhoneNumberField;
-    private JButton AddButton;
-    private JLabel FirstNameLabel;
-    private JLabel LastNameLabel;
-    private JLabel PhoneNumberLabel;
+    private JPanel addCustomerPanel;
+    private JTextField firstNameField;
+    private JTextField lastNameField;
+    private JTextField phoneNumberField;
+    private JButton addButton;
+    private JLabel firstNameLabel;
+    private JLabel lastNameLabel;
+    private JLabel phoneNumberLabel;
     private static JFrame addCustFrame;
 
     public AddCustomer() {
-        AddButton.addActionListener(new ActionListener() {
+        addCustFrame.getRootPane().setDefaultButton(addButton);
+        addButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                if(FirstNameField.getText().toString().isEmpty()){
-                    JOptionPane.showMessageDialog(null, "First name cannot be null value", "Error", JOptionPane.ERROR_MESSAGE);
+                if(firstNameField.getText().toString().isEmpty()){
+                    JOptionPane.showMessageDialog(addCustFrame, "First name cannot be null value", "Error", JOptionPane.ERROR_MESSAGE);
                 }
-                else if(LastNameField.getText().toString().isEmpty()){
-                    JOptionPane.showMessageDialog(null, "Last name cannot be null value", "Error", JOptionPane.ERROR_MESSAGE);
+                else if(lastNameField.getText().toString().isEmpty()){
+                    JOptionPane.showMessageDialog(addCustFrame, "Last name cannot be null value", "Error", JOptionPane.ERROR_MESSAGE);
                 }
-                else if(PhoneNumberField.getText().toString().isEmpty()){
-                    JOptionPane.showMessageDialog(null, "Phone number cannot be null value", "Error", JOptionPane.ERROR_MESSAGE);
+                else if(phoneNumberField.getText().toString().isEmpty()){
+                    JOptionPane.showMessageDialog(addCustFrame, "Phone number cannot be null value", "Error", JOptionPane.ERROR_MESSAGE);
                 }
                 else{
-                    JOptionPane.showMessageDialog(null, "Successfully added customer", "Added" , JOptionPane.INFORMATION_MESSAGE);
-                    AddCustomerDataHandler.addCustomer(FirstNameField.getText().toString(), LastNameField.getText().toString(), PhoneNumberField.getText().toString());
-                    CustomerManagement.openCustomerMangementPanel();
+                    JOptionPane.showMessageDialog(addCustFrame, "Successfully added Customer", "Customer Added" , JOptionPane.INFORMATION_MESSAGE);
+                    AddCustomerDataHandler.addCustomer(firstNameField.getText().toString(), lastNameField.getText().toString(), phoneNumberField.getText().toString());
                     addCustFrame.dispose();
                 }
             }
@@ -38,10 +38,9 @@ public class AddCustomer {
 
     public static void openAddCustomerPanel() {
         addCustFrame = new JFrame("Add Customer");
-        addCustFrame.setContentPane(new AddCustomer().AddCustomerPanel);
+        addCustFrame.setContentPane(new AddCustomer().addCustomerPanel);
         addCustFrame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         addCustFrame.pack();
-        addCustFrame.setSize(400, 400);
         addCustFrame.setLocationRelativeTo(null);
         addCustFrame.setVisible(true);
     }

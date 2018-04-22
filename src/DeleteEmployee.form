@@ -37,7 +37,7 @@
           <forms/>
         </constraints>
         <properties>
-          <text value="Please enter the ID of the Employee you would like to remove"/>
+          <text value="Please enter the ID of the Employee you would like to remove:"/>
         </properties>
       </component>
       <component id="4515b" class="javax.swing.JTextField" binding="deleteField">

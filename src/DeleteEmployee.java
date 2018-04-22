@@ -3,41 +3,44 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class DeleteEmployee {
+    private static JFrame delEmployeeFrame;
     private JPanel deleteEmployeePanel;
     private JTable employeeTable;
     private JButton deleteButton;
     private JLabel deleteEmployeeLabel;
     private JTextField deleteField;
-    private javax.swing.table.DefaultTableModel EmployeeTableModel = new javax.swing.table.DefaultTableModel();
+    private javax.swing.table.DefaultTableModel employeeTableModel = new javax.swing.table.DefaultTableModel();
 
 
     public DeleteEmployee() {
-        employeeTable.setModel(EmployeeTableModel);
-        EmployeeTableModel.setDataVector(CustomerManagementDataHandler.getRows("Employee"),CustomerManagementDataHandler.getTitles("Employee"));
-
-
+        employeeTable.setModel(employeeTableModel);
+        employeeTableModel.setDataVector(CustomerManagementDataHandler.getRows("Employee"),CustomerManagementDataHandler.getTitles("Employee"));
+        delEmployeeFrame.getRootPane().setDefaultButton(deleteButton);
+        deleteField.requestFocus();
         deleteButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 if(deleteField.getText().toString().isEmpty()){
-                    JOptionPane.showMessageDialog(null, "Delete field cannot be null value", "Error", JOptionPane.ERROR_MESSAGE);
+                    JOptionPane.showMessageDialog(delEmployeeFrame, "Delete field cannot be null value", "Error", JOptionPane.ERROR_MESSAGE);
                 }else {
-                    JOptionPane.showMessageDialog(null, "Successfully deleted employee", "Added", JOptionPane.INFORMATION_MESSAGE);
                     DeleteEmployeeDataHandler.deleteEmployee(deleteField.getText().toString());
-                    employeeTable.setModel(EmployeeTableModel);
-                    EmployeeTableModel.setDataVector(CustomerManagementDataHandler.getRows("Employee"), CustomerManagementDataHandler.getTitles("Employee"));
+                    JOptionPane.showMessageDialog(delEmployeeFrame, "Successfully deleted Employee", "Successfully Deleted Employee", JOptionPane.INFORMATION_MESSAGE);
+                    employeeTable.setModel(employeeTableModel);
+                    employeeTableModel.setDataVector(CustomerManagementDataHandler.getRows("Employee"), CustomerManagementDataHandler.getTitles("Employee"));
+                    deleteField.setText(null);
+                    deleteField.requestFocus();
                 }
             }
         });
     }
 
     public static void openDeleteEmployeePanel() {
-        JFrame frame = new JFrame("Delete Customer");
-        frame.setContentPane(new DeleteEmployee().deleteEmployeePanel);
-        frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-        frame.pack();
-        frame.setSize(500, 600);
-        frame.setLocationRelativeTo(null);
-        frame.setVisible(true);
+        delEmployeeFrame = new JFrame("Delete Customer");
+        delEmployeeFrame.setContentPane(new DeleteEmployee().deleteEmployeePanel);
+        delEmployeeFrame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+        delEmployeeFrame.pack();
+        delEmployeeFrame.setSize(500, 600);
+        delEmployeeFrame.setLocationRelativeTo(null);
+        delEmployeeFrame.setVisible(true);
     }
 }

@@ -3,7 +3,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class EmployeeManagement {
-    private JPanel EmployeeManagementPanel;
+    private JPanel employeeManagementPanel;
     private JTable employeeTable;
     private JButton addEmployeeButton;
     private JButton removeEmployeeButton;
@@ -21,7 +21,7 @@ public class EmployeeManagement {
 
     public static void openEmployeeManagementPanel() {
         empMangFrame = new JFrame("Employee Management");
-        empMangFrame.setContentPane(new EmployeeManagement().EmployeeManagementPanel);
+        empMangFrame.setContentPane(new EmployeeManagement().employeeManagementPanel);
         empMangFrame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         empMangFrame.pack();
         empMangFrame.setSize(500, 600);
@@ -37,7 +37,6 @@ public class EmployeeManagement {
             @Override
             public void actionPerformed(ActionEvent e) {
                 AddEmployee.openAddEmployeepanel();
-                empMangFrame.dispose();
             }
         });
         removeEmployeeButton.addActionListener(new ActionListener() {
