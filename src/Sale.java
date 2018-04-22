@@ -69,7 +69,7 @@ public class Sale {
                     int response = JOptionPane.showConfirmDialog(saleFrame, String.format ("Sale Total: €%.2f\nAmount Tendered: €%.2f\nChange Due: €%.2f\n\n Is a Receipt Required?", saleTotal, amountTendered, changeDue), "Sale Complete - Receipt Required?", JOptionPane.YES_NO_OPTION);
                     if (response == 0){
                         MessageFormat header = new MessageFormat("Sales Receipt");
-                        MessageFormat footer = new MessageFormat(String.format ("Sale Total: €%.2 | Amount Tendered: €%.2f | Change Due: €%.2f", saleTotal, amountTendered, changeDue));
+                        MessageFormat footer = new MessageFormat(String.format ("Sale Total: €%.2f | Amount Tendered: €%.2f | Change Due: €%.2f", saleTotal, amountTendered, changeDue));
                         try {
                             SalesLinesTable.print(JTable.PrintMode.FIT_WIDTH, header, footer);
                         } catch (PrinterException e1) {
