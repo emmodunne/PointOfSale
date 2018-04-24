@@ -34,7 +34,7 @@ public class AddStock {
                     JOptionPane.showMessageDialog(addStockFrame, "Sell Price cannot be null value", "Error", JOptionPane.ERROR_MESSAGE);
                 } else {
                     AddStockDataHandler.addStock(barcodeField.getText().toString(), descriptionField.getText().toString(), quantityField.getText().toString(), costPriceField.getText().toString(), sellingPriceField.getText().toString());
-                    JOptionPane.showMessageDialog(addStockFrame, "Successfully added Customer", "Successfully added Customer", JOptionPane.INFORMATION_MESSAGE);
+                    JOptionPane.showMessageDialog(addStockFrame, "Successfully added Stock", "Successfully added Customer", JOptionPane.INFORMATION_MESSAGE);
                     addStockFrame.dispose();
                 }
             }
